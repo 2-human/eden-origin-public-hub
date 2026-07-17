@@ -8,7 +8,7 @@
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/site.css">
 <script src="../assets/order-form.js" defer></script>
 
@@ -51,7 +51,7 @@
 
     <div class="card">
       <h3 style="margin-bottom:.3rem">Pošaljite upit</h3>
-      <p style="font-size:.86rem;color:var(--ink-soft);margin-bottom:1rem">Odgovaramo obično u toku dana.</p>
+      <p style="font-size:var(--fs-sm);color:var(--ink-soft);margin-bottom:1rem">Odgovaramo obično u toku dana.</p>
       <form onsubmit="edenSubmit(event)" id="edenForm" style="display:grid;gap:.7rem">
         <input required placeholder="Ime i prezime" style="padding:.7rem .9rem;border:1px solid var(--hair);border-radius:10px;font:inherit">
         <input type="email" required placeholder="Imejl" style="padding:.7rem .9rem;border:1px solid var(--hair);border-radius:10px;font:inherit">
@@ -63,14 +63,14 @@
         </select>
         <textarea rows="4" placeholder="Vaša poruka" style="padding:.7rem .9rem;border:1px solid var(--hair);border-radius:10px;font:inherit;resize:vertical"></textarea>
         <button class="btn" type="submit" style="justify-content:center">Pošalji upit</button>
-        <p style="font-size:.74rem;color:var(--ink-soft);margin:0">Slanjem prihvatate da vas kontaktiramo povodom upita. Ovo je prototip forme.</p>
+        <p style="font-size:var(--fs-xs);color:var(--ink-soft);margin:0">Slanjem prihvatate da vas kontaktiramo povodom upita. Ovo je prototip forme.</p>
       </form>
     </div>
   </div>
 </section>
 <script>
 function edenSubmit(e){e.preventDefault();var f=document.getElementById('edenForm');
-  f.innerHTML='<div style="text-align:center;padding:1.5rem 0"><div style="width:52px;height:52px;border-radius:50%;background:#eef1e6;color:#4a5a3c;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1rem">&#10003;</div><h3 style="margin-bottom:.3rem">Hvala na poruci</h3><p style="font-size:.9rem;color:#5b5560">Javićemo vam se u najkraćem roku. Ovo je prototip, poruka nije poslata.</p></div>';}
+  f.innerHTML='<div style="text-align:center;padding:1.5rem 0"><div style="width:52px;height:52px;border-radius:50%;background:#eef1e6;color:#4a5a3c;display:flex;align-items:center;justify-content:center;font-size:var(--fs-h3);margin:0 auto 1rem">&#10003;</div><h3 style="margin-bottom:.3rem">Hvala na poruci</h3><p style="font-size:var(--fs-base);color:#5b5560">Javićemo vam se u najkraćem roku. Ovo je prototip, poruka nije poslata.</p></div>';}
 </script>
 </main>
 <footer class="site-foot"><div class="wrap">
