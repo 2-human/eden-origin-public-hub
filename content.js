@@ -679,8 +679,11 @@ window.HUB = {
 /* Review widget: load the config then the inert-by-default bootstrap. hub.html is
    the chassis and is not edited per pitch, so the widget is attached from here.
    async=false preserves order (config defines EDEN_REVIEW_CONFIG before bootstrap
-   reads it); the bootstrap resolves review-mode.css/js relative to its own URL. */
-(function(){
+   reads it); the bootstrap resolves review-mode.css/js relative to its own URL.
+   TOGGLE: the widget is hidden for now. Flip REVIEW_WIDGET_ENABLED to true (here
+   AND `REVIEW_WIDGET = True` in website/_src/build.py, then rebuild) to reactivate. */
+var REVIEW_WIDGET_ENABLED = false;
+if (REVIEW_WIDGET_ENABLED) (function(){
   var head = document.head || document.documentElement;
   ['review.config.js','review-bootstrap.js'].forEach(function(src){
     var s = document.createElement('script'); s.src = src; s.async = false; head.appendChild(s);

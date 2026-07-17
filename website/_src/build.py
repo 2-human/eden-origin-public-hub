@@ -99,9 +99,13 @@ FOOT = """</main>
     <span>Uživajte odgovorno. 18+</span>
   </div>
 </div></footer>
-<script src="{root}review.config.js"></script>
-<script src="{root}review-bootstrap.js"></script>
-</body></html>"""
+{review}</body></html>"""
+
+# Review widget on the website. Hidden for now; flip to True (and set
+# REVIEW_WIDGET_ENABLED = true in ../content.js) then rebuild to reactivate.
+REVIEW_WIDGET = False
+REVIEW_SCRIPTS = ('<script src="{root}review.config.js"></script>\n'
+                  '<script src="{root}review-bootstrap.js"></script>\n')
 
 LOGO = ('<span class="brand__mark" aria-hidden="true">'
         '<svg viewBox="0 0 24 30" width="20" height="25"><path d="M12 1C8 7 6 11 6 15a6 6 0 0 0 12 0c0-4-2-8-6-14z" '
@@ -172,9 +176,10 @@ def build():
         schema_html = ""
         if schema:
             schema_html = open(os.path.join(SRC, "pages", schema), encoding="utf-8").read()
+        review = REVIEW_SCRIPTS.format(root=root) if REVIEW_WIDGET else ""
         page = (HEAD.format(title=title, desc=desc, root=root, nav=nav_html(active, root),
                             schema=schema_html, logo=LOGO)
-                + body + FOOT.format(root=root, logo_foot=LOGO_FOOT))
+                + body + FOOT.format(root=root, logo_foot=LOGO_FOOT, review=review))
         page = page.replace("{{ROOT}}", root)
         dest = os.path.join(OUT, out_path)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
