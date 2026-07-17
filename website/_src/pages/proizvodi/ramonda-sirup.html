@@ -14,12 +14,49 @@
       <h1>Ramonda sirup</h1>
       <p class="prod__dek">Bezalkoholna strana Eden Origina. Sirup od cveta lavande, nazvan po ramondi, srpskom cvetu koji preživi i najsuvlje leto. Za limunade, ledene čajeve, deserte i palačinke. Kap lavande za ceo dan.</p>
 
-      <div class="callout" style="margin-top:0"><b>Dostupnost.</b> Ramonda sirup se pravi sezonski, u malim serijama. Za trenutnu dostupnost i cenu pišite nam ili proverite Ananas prodavnicu.</div>
+      <div class="callout" style="margin-top:0"><b>Sezonski proizvod.</b> Ramonda sirup se pravi u malim serijama. Poručite direktno uz dostavu, ili preko Ananasa.</div>
 
-      <div class="buystrip" style="margin-top:1.2rem">
-        <div class="buystrip__b"><b>Proverite dostupnost</b><span>Poručivanje preko Eden Origin prodavnice na Ananasu</span></div>
-        <a class="btn" href="https://ananas.rs/prodavnica/eden-origin" target="_blank" rel="noopener">Ananas prodavnica</a>
-        <a class="btn btn--ghost" href="{{ROOT}}kontakt/">Pišite nam</a>
+      <div class="buy2" id="buy2">
+        <div class="buy2__tabs">
+          <button type="button" class="buy2__tab is-on" onclick="buyTab(0)">Direktna dostava</button>
+          <button type="button" class="buy2__tab" onclick="buyTab(1)">Kupi na Ananasu</button>
+        </div>
+        <div class="buy2__panel" id="buyP0">
+          <div class="buy2__variant">Varijanta 1 &middot; porudžbina i dostava direktno od nas</div>
+          <div class="ord__row">
+            <label for="ordSize">Zapremina</label>
+            <select id="ordSize" onchange="ordCalc()">
+              <option value="1040">0,2 l &middot; 1.040 RSD</option>
+              <option value="1450" selected>0,5 l &middot; 1.450 RSD</option>
+              <option value="1850">0,7 l &middot; 1.850 RSD</option>
+            </select>
+          </div>
+          <div class="ord__row">
+            <label for="ordQty">Količina (broj flaša)</label>
+            <input id="ordQty" type="number" min="1" step="1" value="12" oninput="ordCalc()">
+          </div>
+          <div class="ord__tiers">Popust na veće količine: <b>10 do 20 kom 5%</b> &middot; <b>21 do 50 kom 7%</b> &middot; <b>preko 50 kom 10%</b></div>
+          <div class="ord__calc">
+            <div><span>Cena bez popusta</span><b id="ordSub">17.400 RSD</b></div>
+            <div id="ordDiscRow" class="ord__disc-on"><span>Popust (<span id="ordPct">5%</span>)</span><b id="ordDisc">&minus;870 RSD</b></div>
+            <div class="ord__total"><span>Ukupno za plaćanje</span><b id="ordTotal">16.530 RSD</b></div>
+          </div>
+          <form class="ord__form" id="ordForm" onsubmit="ordSubmit(event)">
+            <input required placeholder="Ime i prezime">
+            <input required placeholder="Telefon">
+            <input required placeholder="Adresa za dostavu">
+            <button class="btn" type="submit" style="justify-content:center">Pošalji porudžbinu</button>
+          </form>
+          <p class="ord__note">Nakon slanja, porudžbina bi se pojavila u CRM-u (kartica Porudžbine). Cene su iste kao za ViolaVerde vanilu, ovo je prototip forme.</p>
+        </div>
+        <div class="buy2__panel" id="buyP1" hidden>
+          <div class="buy2__variant">Varijanta 2 &middot; kupovina preko Ananasa</div>
+          <div class="buystrip" style="margin:0;box-shadow:none;border:0;padding:0">
+            <div class="buystrip__b"><b>Poruči preko Ananasa</b><span>Eden Origin prodavnica na Ananasu</span></div>
+            <a class="btn" href="https://ananas.rs/prodavnica/eden-origin" target="_blank" rel="noopener">Ananas prodavnica</a>
+            <a class="btn btn--ghost" href="{{ROOT}}kontakt/">Pišite nam</a>
+          </div>
+        </div>
       </div>
 
       <div class="prod__facts">

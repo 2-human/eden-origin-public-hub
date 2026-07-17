@@ -51,6 +51,7 @@ HEAD = """<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{root}assets/site.css">
+<script src="{root}assets/order-form.js" defer></script>
 {schema}
 </head>
 <body>
@@ -98,6 +99,8 @@ FOOT = """</main>
     <span>Uživajte odgovorno. 18+</span>
   </div>
 </div></footer>
+<script src="{root}review.config.js"></script>
+<script src="{root}review-bootstrap.js"></script>
 </body></html>"""
 
 LOGO = ('<span class="brand__mark" aria-hidden="true">'
@@ -184,6 +187,14 @@ def build():
     img_src = os.path.join(SRC, "assets", "img")
     if os.path.isdir(img_src):
         shutil.copytree(img_src, os.path.join(OUT, "assets", "img"), dirs_exist_ok=True)
+    # shared order-form script (used by product pages)
+    shutil.copy(os.path.join(SRC, "order-form.js"), os.path.join(OUT, "assets", "order-form.js"))
+    # review widget: reuse the hub-level files so the website pages are reviewable too
+    HUB = os.path.join(OUT, "..")
+    for rf in ("review.config.js", "review-bootstrap.js", "review-mode.js", "review-mode.css"):
+        src = os.path.join(HUB, rf)
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(OUT, rf))
     print("done")
 
 if __name__ == "__main__":

@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/order-form.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -109,38 +110,6 @@
           </div>
         </div>
       </div>
-      <script>
-      function buyTab(i){
-        document.querySelectorAll('#buy2 .buy2__tab').forEach(function(t,k){t.classList.toggle('is-on',k===i);});
-        document.getElementById('buyP0').hidden = (i!==0);
-        document.getElementById('buyP1').hidden = (i!==1);
-      }
-      function ordFmt(n){ return Math.round(n).toLocaleString('sr-RS') + ' RSD'; }
-      function ordTier(q){ if(q>50) return 0.10; if(q>=21) return 0.07; if(q>=10) return 0.05; return 0; }
-      function ordCalc(){
-        var unit = parseFloat(document.getElementById('ordSize').value);
-        var qty = Math.max(1, parseInt(document.getElementById('ordQty').value||'1',10));
-        var sub = unit*qty, pct = ordTier(qty), disc = sub*pct, total = sub-disc;
-        document.getElementById('ordSub').textContent = ordFmt(sub);
-        document.getElementById('ordPct').textContent = Math.round(pct*100)+'%';
-        document.getElementById('ordDisc').innerHTML = (disc>0?'−':'') + ordFmt(disc);
-        document.getElementById('ordTotal').textContent = ordFmt(total);
-        document.getElementById('ordDiscRow').classList.toggle('ord__disc-on', disc>0);
-      }
-      function ordSubmit(e){
-        e.preventDefault();
-        var unit = parseFloat(document.getElementById('ordSize').value);
-        var qty = Math.max(1, parseInt(document.getElementById('ordQty').value||'1',10));
-        var sub = unit*qty, pct = ordTier(qty), total = sub-sub*pct;
-        document.getElementById('buyP0').innerHTML =
-          '<div class="ord__done"><div class="tick">✓</div>'
-          + '<h3 style="margin-bottom:.3rem">Hvala na porudžbini</h3>'
-          + '<p style="font-size:.9rem;color:var(--ink-soft);max-width:34ch;margin:.2rem auto 0">'
-          + qty + ' flaša &middot; popust ' + Math.round(pct*100) + '% &middot; ukupno <b>' + ordFmt(total) + '</b>. '
-          + 'U pravom sistemu ova porudžbina bi se pojavila u CRM-u. Ovo je prototip, porudžbina nije poslata.</p></div>';
-      }
-      ordCalc();
-      </script>
 
       <div class="prod__facts">
         <div class="fact"><b>Sastav</b><span>Prirodni destilat, macerat cveta lavande, vanila, šećer. Bez veštačkih boja i aroma.</span></div>
@@ -197,4 +166,6 @@
     <span>Uživajte odgovorno. 18+</span>
   </div>
 </div></footer>
+<script src="../../review.config.js"></script>
+<script src="../../review-bootstrap.js"></script>
 </body></html>

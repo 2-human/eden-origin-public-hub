@@ -550,6 +550,17 @@ window.HUB = {
    into hub.html). This hub is fully Serbian, so localize that one string to
    "Predlog za" after the engine has drawn it. content.js loads before the engine,
    so defer to DOMContentLoaded, which fires after the engine's synchronous run. */
+/* Review widget: load the config then the inert-by-default bootstrap. hub.html is
+   the chassis and is not edited per pitch, so the widget is attached from here.
+   async=false preserves order (config defines EDEN_REVIEW_CONFIG before bootstrap
+   reads it); the bootstrap resolves review-mode.css/js relative to its own URL. */
+(function(){
+  var head = document.head || document.documentElement;
+  ['review.config.js','review-bootstrap.js'].forEach(function(src){
+    var s = document.createElement('script'); s.src = src; s.async = false; head.appendChild(s);
+  });
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
   var p = document.getElementById('hubProposal');
   if (p) p.innerHTML = 'Predlog za <b>' + window.HUB.brand.proposalFor + '</b>';
