@@ -191,6 +191,33 @@ section{position:relative}
 .buystrip__b b{font-family:var(--font-d);font-size:1.35rem;color:var(--violet-ink);display:block}
 .buystrip__b span{font-size:.86rem;color:var(--ink-soft)}
 
+/* two-variant purchase module + order form */
+.buy2{border:1px solid var(--hair);border-radius:16px;background:#fff;box-shadow:var(--shadow);overflow:hidden;margin:1.6rem 0}
+.buy2__tabs{display:flex;border-bottom:1px solid var(--hair);background:var(--lav-mist)}
+.buy2__tab{flex:1;border:0;background:none;font-family:var(--font-b);font-weight:600;font-size:.9rem;color:var(--ink-soft);padding:.9rem 1rem;cursor:pointer;border-bottom:2px solid transparent}
+.buy2__tab.is-on{color:var(--violet-deep);background:#fff;border-bottom-color:var(--gold)}
+.buy2__panel{padding:1.4rem 1.6rem}
+.buy2__panel[hidden]{display:none}
+.buy2__variant{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--verde);margin-bottom:.8rem}
+.ord__row{display:grid;grid-template-columns:150px 1fr;gap:1rem;align-items:center;margin-bottom:.8rem}
+.ord__row label{font-size:.85rem;color:var(--violet-ink);font-weight:500}
+.ord__row select,.ord__row input,.ord__form input{width:100%;padding:.65rem .8rem;border:1px solid var(--hair);border-radius:10px;font:inherit;color:var(--ink);background:#fff}
+.ord__tiers{font-size:.78rem;color:var(--ink-soft);background:var(--lav-mist);border-radius:10px;padding:.6rem .8rem;margin:.4rem 0 1rem}
+.ord__tiers b{color:var(--violet-deep)}
+.ord__calc{border:1px solid var(--hair);border-radius:12px;overflow:hidden;margin-bottom:1.1rem}
+.ord__calc>div{display:flex;justify-content:space-between;align-items:center;padding:.6rem .9rem;font-size:.9rem;border-bottom:1px solid #f0ece4}
+.ord__calc>div:last-child{border-bottom:0}
+.ord__calc span{color:var(--ink-soft)}
+.ord__calc b{font-variant-numeric:tabular-nums;color:var(--violet-ink)}
+.ord__calc .ord__total{background:var(--lav-mist)}
+.ord__calc .ord__total span{color:var(--violet-ink);font-weight:600}
+.ord__calc .ord__total b{font-family:var(--font-d);font-size:1.5rem;color:var(--violet-deep)}
+.ord__disc-on b{color:var(--verde-deep)}
+.ord__form{display:grid;gap:.6rem;margin-top:.4rem}
+.ord__note{font-size:.74rem;color:var(--ink-soft);margin:.6rem 0 0}
+.ord__done{text-align:center;padding:1.4rem 0}
+.ord__done .tick{width:52px;height:52px;border-radius:50%;background:#eef1e6;color:#4a5a3c;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1rem}
+
 /* breadcrumbs + cluster hint */
 .crumbs{font-size:.78rem;color:var(--ink-soft);padding:1.2rem 0 0}
 .crumbs a{color:var(--verde)}

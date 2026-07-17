@@ -23,6 +23,9 @@ window.HUB = {
     ]},
     { section: "Društvene mreže", items: [
       { view: "social", label: "Organske objave", badge: 6 }
+    ]},
+    { section: "CRM", items: [
+      { view: "orders", label: "Porudžbine", badge: 6 }
     ]}
   ],
   /* LinkedIn/Facebook/Instagram chrome is only used by the built-in renderSocial.
@@ -43,7 +46,8 @@ window.HUB = {
     cluster:  { title: "Klaster sadržaja", sub: "Od vaših objava, preko izvedenih stranica, do porudžbine na Ananasu" },
     articles: { title: "Primeri članaka", sub: "Stranice koje bismo objavili na vašem brendu, prikazano pet, jedna u celini" },
     website:  { title: "Sajt", sub: "Funkcionalni prototip, dom u koji vaše objave vode", open: WEB, openLabel: "Otvori u novom tabu ↗", tbBadge: "Funkcionalni prototip" },
-    social:   { title: "Organske objave", sub: "Vaše prave objave sa Instagrama i Facebooka, povezane sa stranicama na koje bi vodile", open: "https://www.instagram.com/eden.origin/", openLabel: "Otvori Instagram ↗" }
+    social:   { title: "Organske objave", sub: "Vaše prave objave sa Instagrama i Facebooka, povezane sa stranicama na koje bi vodile", open: "https://www.instagram.com/eden.origin/", openLabel: "Otvori Instagram ↗" },
+    orders:   { title: "Porudžbine", sub: "Jednostavan CRM, porudžbine sa količinom, popustom i ukupno plaćenim iznosom" }
   },
   clients: [
     {name:"Belgrade Waterfront", logo:"belgrade-waterfront.svg", desc:"Najveći projekat razvoja nekretnina na obali u jugoistočnoj Evropi.", did:"SEO, izrada sajta, vođenje društvenih mreža, digitalno oglašavanje i foto i video produkcija."},
@@ -61,6 +65,10 @@ window.HUB = {
       <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
       <h1>Uvod</h1>
       <p class="brief__lede">Ovaj predlog nije počeo od vašeg upita, počeo je od vašeg profila. Naišli smo na priču Eden Origina, na lavandu koju gajite i berete rukom u Milićevcima, na flašu ViolaVerde, na koktele i deserte, i pomislili da taj proizvod zaslužuje mesto na internetu koje je osmišljeno pažljivo koliko i on sam. Zato nismo hteli da vam opisujemo šta bismo radili, već smo jedan deo toga napravili, i to na vašem brendu.</p>
+      <div style="border:1px solid var(--copper);background:var(--copper-tint);border-radius:12px;padding:1.05rem 1.25rem;margin:1.4rem 0">
+        <span style="display:block;font-family:var(--font-display);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--copper-dark);margin-bottom:.4rem">Napomena o sadržaju</span>
+        <p style="margin:0;font-size:.92rem;line-height:1.6;color:#2a2a2f">Svi tekstovi i vizuali u ovom hubu polaze od vašeg originalnog sadržaja, od vaših objava, fotografija i priče. Deo vizuala je zatim obrađen uz pomoć veštačke inteligencije kako bismo brzo pokazali kako bi stranice izgledale, pa su to ilustrativni primeri i uzorak materijala, a ne finalna verzija. U pravom projektu sve bi bilo dodatno doterano ljudskom rukom, sa vašim originalnim fotografijama i vašim glasom. Objave u delu Organske objave prikazane su sa vašim izvornim slikama.</p>
+      </div>
       <blockquote class="brief__quote">&bdquo;Da bismo ublažili jaku aromu lavande u miksologiji, prvi proizvod smo omekšali vanilom, a drugi borovnicom.&ldquo;<cite>Ana Tomašević, Eden Origin</cite></blockquote>
       <div class="brief__body">
         <p>Evo šta smo primetili i zbog čega smo vam se javili.</p>
@@ -78,6 +86,12 @@ window.HUB = {
       <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
       <h1>Preporuke</h1>
       <p class="brief__lede">Ovo je obrazloženje za sve što je prikazano u ovom hubu. Nije spisak taktika, već jedan povezan sistem koji sadržaj koji već pravite pretvara u porudžbine, i čini Eden Origin nečim što pretraživači i veštačka inteligencija zaista mogu da pronađu. Evo šta bismo napravili i zašto svaki deo ima svoje mesto.</p>
+
+      <div style="border-left:3px solid var(--copper);background:linear-gradient(180deg,var(--copper-tint),transparent);border-radius:0 12px 12px 0;padding:1.2rem 1.4rem;margin:1.6rem 0">
+        <h3 style="font-family:var(--font-display);font-size:1.35rem;color:var(--charcoal);margin:0 0 .5rem">Zašto sada, a ne tek kada Shopify bude gotov</h3>
+        <p style="margin:0 0 .6rem;font-size:.95rem;line-height:1.6;color:#2a2a2f">Znamo da već gradite prodavnicu na Shopify-ju i da to traje. Upravo zato bi ovaj sadržajni sajt trebalo pokrenuti odmah, paralelno, a ne čekati. Domen i sadržaj traže vreme da sazru u pretrazi, pa je svaki mesec čekanja mesec u kome vas Google i veštačka inteligencija praktično ne vide.</p>
+        <p style="margin:0;font-size:.95rem;line-height:1.6;color:#2a2a2f">Ako sada objavite priču, recepte i stranice proizvoda, do trenutka kada Shopify prodavnica bude spremna vaš domen će već imati istoriju, poverenje i vidljivost, umesto da kreće od nule. Sadržajni sajt i buduća prodavnica se ne isključuju, jer sadržaj zagreva teren za prodaju koja tek dolazi. Kada Shopify bude spreman, ove iste stranice i posete se prirodno preusmere na njega.</p>
+      </div>
 
       <div class="brief__sec">
         <p class="brief__num">01</p>
@@ -410,7 +424,8 @@ window.HUB = {
       .ig-post__pf{width:24px;height:24px;border-radius:6px;color:#fff;font-weight:700;font-size:.72rem;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
       .ig-post__pf.ig{background:linear-gradient(135deg,#a63f9c,#e26a4d)}
       .ig-post__pf.fb{background:#1877f2}
-      .ig-post__media{aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:1.3rem;text-align:center;padding:1rem;position:relative}
+      .ig-post__media{aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-size:1.3rem;text-align:center;padding:1rem;position:relative;overflow:hidden;background:#2c2340}
+      .ig-post__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
       .ig-post__cap{padding:.65rem .85rem;font-size:.85rem;line-height:1.45;color:#2a2a2f}
       .ig-post__cap b{color:var(--charcoal)}
       .ig-post__link{display:flex;align-items:center;gap:.5rem;margin:.2rem .85rem .9rem;padding:.6rem .75rem;border:1px dashed var(--copper);border-radius:9px;background:var(--copper-tint);font-size:.8rem;color:var(--copper-dark);font-weight:700;text-decoration:none}
@@ -420,14 +435,14 @@ window.HUB = {
     <div class="social">
       <div class="soc-head">
         <h1>Organske objave</h1>
-        <p class="lede">Zamolili ste nas da ne pišemo nove objave, jer su vaše već sjajne, i slažemo se. Zato ovo nisu makete. To su vaše <strong>prave objave</strong>, preuzete sa <strong>@eden.origin</strong> (11,1 hiljada pratilaca) i vaše Facebook strane, sa pravim opisima. Svaka je povezana sa stranicom na novom sajtu na koju bi <strong>vodila</strong>. Ta jedna veza je promena, jer objava prestaje da bude slepa ulica i postaje početak puta do porudžbine. Isprekidana veza na svakoj kartici pokazuje odredište, a &bdquo;Otvori original&ldquo; otvara pravu objavu.</p>
+        <p class="lede">Zamolili ste nas da ne pišemo nove objave, jer su vaše već sjajne, i slažemo se. Zato ovo nisu makete. To su vaše <strong>prave objave</strong>, preuzete sa <strong>@eden.origin</strong> (11,1 hiljada pratilaca) i vaše Facebook strane, sa izvornim slikama i pravim opisima. Svaka je povezana sa stranicom na novom sajtu na koju bi <strong>vodila</strong>. Ta jedna veza je promena, jer objava prestaje da bude slepa ulica i postaje početak puta do porudžbine. Isprekidana veza na svakoj kartici pokazuje odredište, a &bdquo;Otvori original&ldquo; otvara pravu objavu.</p>
       </div>
       <span id="artFilter" hidden></span>
       <div class="ig-feed">
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; pre 2 dana</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#5b4b8a,#3e3163)">Bezalkoholni serve<br>@kissa10.bg &middot; preko leda</div>
+          <div class="ig-post__media"><img src="assets/social/kissa10.jpg" alt="Bezalkoholni ViolaVerde serve u @kissa10.bg"></div>
           <div class="ig-post__cap"><b>eden.origin</b> 🍇🫧 U @kissa10.bg svaki korak pripreme pažljivo je osmišljen kako bi se sačuvala puna aroma lavande. Lagan, osvežavajući i potpuno bezalkoholni napitak koji se služi preko leda i završava bobicama mariniranog grožđa.</div>
           <a class="ig-post__link" href="website/proizvodi/violaverde-vanila/" target="_blank" rel="noopener">→ vodi na: Stranica proizvoda ViolaVerde</a>
           <div class="ig-post__foot"><span>&#9825; 72</span><span>&#128172; 9</span><a href="https://www.instagram.com/eden.origin/reel/DayHwAwoQ8h/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -435,7 +450,7 @@ window.HUB = {
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; 30. jun</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#4a5a3c)">Angustifolia vera<br>polje &middot; pčele i polinatori</div>
+          <div class="ig-post__media"><img src="assets/social/angustifolia.jpg" alt="Bojan sa ViolaVerde flašom u polju lavande"></div>
           <div class="ig-post__cap"><b>eden.origin</b> 🚀 Ovde sve počinje. Angustifolia vera, zbog svoje aromatičnosti, važna je za pčele i druge polinatore. Od iste vrste lavande nastaju ViolaVerde i Ramonda. Neke stvari ne mogu i ne treba da se ubrzaju. Samo se neguju, sezonu za sezonom.</div>
           <a class="ig-post__link" href="website/vodic/kako-nastaje-liker-od-lavande/" target="_blank" rel="noopener">→ vodi na: Kako nastaje liker od lavande</a>
           <div class="ig-post__foot"><span>&#9825; 1.008</span><span>&#128172; 14</span><a href="https://www.instagram.com/eden.origin/reel/DaOKIYnIB0D/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -443,7 +458,7 @@ window.HUB = {
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; 5. jul</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#8f7bbf,#5b4b8a)">Lavender Lemon Bliss<br>recept &middot; ViolaVerde + limun</div>
+          <div class="ig-post__media"><img src="assets/social/lemonbliss.jpg" alt="Lavender Lemon Bliss koktel u polju lavande"></div>
           <div class="ig-post__cap"><b>eden.origin</b> 🍹 Lagani letnji užitak. Lavender Lemon Bliss: 30ml ViolaVerde likera, 150ml soka od limuna, led po želji. Osveži se i javi utiske!</div>
           <a class="ig-post__link" href="website/recepti/lavanda-lemon-bliss/" target="_blank" rel="noopener">→ vodi na: Recept za Lavender Lemon Bliss</a>
           <div class="ig-post__foot"><span>&#9825; 336</span><span>&#128172; 12</span><a href="https://www.instagram.com/eden.origin/reel/Daa_Pp9IEy1/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -451,7 +466,7 @@ window.HUB = {
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Beograd &middot; 28. jun</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#4a3466,#2c2340)">Nedeljni Viola kokteli<br>bar &middot; Beograd</div>
+          <div class="ig-post__media"><img src="assets/social/nedeljni.jpg" alt="Nedeljni Viola kokteli, Beograd"></div>
           <div class="ig-post__cap"><b>eden.origin</b> 🍹 Nedeljni Viola kokteli.</div>
           <a class="ig-post__link" href="website/recepti/" target="_blank" rel="noopener">→ vodi na: Recepti, Viola kokteli</a>
           <div class="ig-post__foot"><span>&#9825; 31</span><a href="https://www.instagram.com/eden.origin/p/DaJBTScqzJg/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -459,7 +474,7 @@ window.HUB = {
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>sa Anom &middot; 23. jun</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#5c6d4a)">Pet godina Eden Origina<br>priča o počecima</div>
+          <div class="ig-post__media"><img src="assets/social/petgodina.jpg" alt="Pet godina Eden Origina"></div>
           <div class="ig-post__cap"><b>eden.origin</b> 🪻 Pre 5 godina sanjali smo ovo danas. Pet godina učenja, pokušaja i verovanja da lavanda može biti mnogo više od mirisa u kesici ili ukrasa u bašti. Danas iza nas stoje ViolaVerde i Ramonda. A najlepše tek sledi.</div>
           <a class="ig-post__link" href="website/prica/" target="_blank" rel="noopener">→ vodi na: Naša priča</a>
           <div class="ig-post__foot"><span>&#9825; 384</span><span>&#128172; 22</span><a href="https://www.instagram.com/eden.origin/p/DZ8MNwnIHmA/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -467,7 +482,7 @@ window.HUB = {
 
         <div class="ig-post">
           <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>Eden Origin</b><span>Facebook &middot; strana</span></div><span class="ig-post__pf fb">f</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#c19a4b,#a07f34)">„Pod nebom lavande ležimo”<br>brend</div>
+          <div class="ig-post__media"><img src="assets/social/brand.jpg" alt="ViolaVerde, pod nebom lavande ležimo"></div>
           <div class="ig-post__cap"><b>Eden Origin</b> 🪻 „Pod nebom lavande ležimo.” ViolaVerde, jedinstveni liker od lavande uzgajane u Srbiji.</div>
           <a class="ig-post__link" href="website/proizvodi/" target="_blank" rel="noopener">→ vodi na: Proizvodi</a>
           <div class="ig-post__foot"><span>&#128100; 159 pratilaca</span><a href="https://www.facebook.com/profile.php?id=100081009832761" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
@@ -476,6 +491,56 @@ window.HUB = {
       </div>
       <div id="socialContent" hidden></div>
       <p class="lede" style="margin-top:1.6rem;font-size:.9rem">Opisi, datumi i reakcije iznad su vaše prave objave iz juna i jula 2026. Ono što predlažemo je isprekidana veza na svakoj kartici, odredište koje objavu pretvara u prvi korak ka porudžbini. Recept Lavender Lemon Bliss je sada napravljen i živ na sajtu, izveden od reči do reči iz vaše objave.</p>
+    </div>
+  `,
+    orders: `
+    <style>
+      .crm-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.4rem 0 1.8rem}
+      .crm-sum__card{border:1px solid var(--hairline);border-radius:12px;background:#fff;padding:1rem 1.2rem}
+      .crm-sum__card b{display:block;font-family:var(--font-display);font-size:1.7rem;color:var(--charcoal);line-height:1.1}
+      .crm-sum__card span{font-size:.76rem;color:var(--ink-muted);letter-spacing:.02em}
+      .otbl-wrap{overflow-x:auto;border:1px solid var(--hairline);border-radius:12px;background:#fff}
+      .otbl{width:100%;border-collapse:collapse;min-width:820px;font-size:.85rem}
+      .otbl th{text-align:left;font-family:var(--font-display);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);padding:.8rem 1rem;border-bottom:1px solid var(--hairline);white-space:nowrap}
+      .otbl td{padding:.75rem 1rem;border-bottom:1px solid #f0ece4;color:#2a2a2f;vertical-align:middle}
+      .otbl tr:last-child td{border-bottom:0}
+      .otbl__num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+      .otbl__paid{font-weight:700;color:var(--charcoal)}
+      .o-disc{display:inline-block;font-size:.72rem;font-weight:700;color:var(--copper-dark);background:var(--copper-tint);border:1px solid var(--copper);border-radius:999px;padding:.1rem .5rem}
+      .o-disc--0{color:var(--ink-muted);background:#f3f0ea;border-color:var(--hairline)}
+      .o-chan{font-size:.72rem;font-weight:600;border-radius:999px;padding:.1rem .55rem;white-space:nowrap}
+      .o-chan--d{color:#2f6d4f;background:#e6f2ec;border:1px solid #bcdcc9}
+      .o-chan--a{color:#7a4a12;background:#fbeede;border:1px solid #f0d3ad}
+      .o-st{font-size:.72rem;font-weight:600;color:var(--ink-muted)}
+      .o-st b{color:#2f6d4f}
+    </style>
+    <div class="cluster">
+      <h1>Porudžbine</h1>
+      <p class="lede">Jednostavan CRM koji pokazuje ono što je najvažnije: koliko je flaša otišlo, po kom popustu i koliko je na kraju plaćeno. Porudžbine sa forme za direktnu dostavu (kartica proizvoda) slivale bi se ovde automatski, a porudžbine sa Ananasa unosile bi se ručno ili preko uvoza. Prikaz je uzorak sa primerima.</p>
+
+      <div class="crm-sum">
+        <div class="crm-sum__card"><b>6</b><span>porudžbina</span></div>
+        <div class="crm-sum__card"><b>139</b><span>flaša ukupno</span></div>
+        <div class="crm-sum__card"><b>180.390</b><span>RSD ukupno plaćeno</span></div>
+        <div class="crm-sum__card"><b>15.820</b><span>RSD odobrenih popusta</span></div>
+      </div>
+
+      <div class="otbl-wrap">
+        <table class="otbl">
+          <thead>
+            <tr><th>Datum</th><th>Kupac</th><th>Proizvod</th><th class="otbl__num">Količina</th><th class="otbl__num">Cena stavke</th><th>Popust</th><th class="otbl__num">Ukupno plaćeno</th><th>Kanal</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>14. jul 2026</td><td>Kafe „Lavanda", Čačak</td><td>ViolaVerde vanila 0,5 l</td><td class="otbl__num">24</td><td class="otbl__num">34.800</td><td><span class="o-disc">7%</span></td><td class="otbl__num otbl__paid">32.364</td><td><span class="o-chan o-chan--d">Direktna dostava</span></td><td class="o-st"><b>Isporučeno</b></td></tr>
+            <tr><td>12. jul 2026</td><td>Restoran Živa, Beograd</td><td>ViolaVerde vanila 0,5 l</td><td class="otbl__num">60</td><td class="otbl__num">87.000</td><td><span class="o-disc">10%</span></td><td class="otbl__num otbl__paid">78.300</td><td><span class="o-chan o-chan--d">Direktna dostava</span></td><td class="o-st">U pripremi</td></tr>
+            <tr><td>10. jul 2026</td><td>Poklon kutak, Novi Sad</td><td>ViolaVerde vanila 0,2 l</td><td class="otbl__num">12</td><td class="otbl__num">12.480</td><td><span class="o-disc">5%</span></td><td class="otbl__num otbl__paid">11.856</td><td><span class="o-chan o-chan--d">Direktna dostava</span></td><td class="o-st"><b>Isporučeno</b></td></tr>
+            <tr><td>8. jul 2026</td><td>Milica Jovanović</td><td>ViolaVerde vanila 0,2 l</td><td class="otbl__num">2</td><td class="otbl__num">2.080</td><td><span class="o-disc o-disc--0">bez</span></td><td class="otbl__num otbl__paid">2.080</td><td><span class="o-chan o-chan--a">Ananas</span></td><td class="o-st"><b>Isporučeno</b></td></tr>
+            <tr><td>4. jul 2026</td><td>Hotel Morava, Kraljevo</td><td>ViolaVerde vanila 0,5 l</td><td class="otbl__num">40</td><td class="otbl__num">58.000</td><td><span class="o-disc">7%</span></td><td class="otbl__num otbl__paid">53.940</td><td><span class="o-chan o-chan--d">Direktna dostava</span></td><td class="o-st"><b>Isporučeno</b></td></tr>
+            <tr><td>1. jul 2026</td><td>Ana Perić</td><td>ViolaVerde vanila 0,7 l</td><td class="otbl__num">1</td><td class="otbl__num">1.850</td><td><span class="o-disc o-disc--0">bez</span></td><td class="otbl__num otbl__paid">1.850</td><td><span class="o-chan o-chan--a">Ananas</span></td><td class="o-st"><b>Isporučeno</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cluster-note"><strong>Kako se povezuje:</strong> forma za direktnu dostavu na kartici proizvoda računa količinu, popust na veće količine (5% za 10 do 20, 7% za 21 do 49, 10% za 50 i više) i ukupan iznos, i svaka takva porudžbina bi se pojavila u ovoj tabeli. Popusti su ovde vidljivi po redu, a zbir na vrhu pokazuje promet i odobrene popuste.</div>
     </div>
   `
   }
@@ -488,4 +553,12 @@ window.HUB = {
 document.addEventListener('DOMContentLoaded', function(){
   var p = document.getElementById('hubProposal');
   if (p) p.innerHTML = 'Predlog za <b>' + window.HUB.brand.proposalFor + '</b>';
+  // The "orders" view is a new key with no chassis icon; add one here (content.js only).
+  var o = document.querySelector('.hub-item[data-view="orders"]');
+  if (o && o.querySelector('svg') === null) {
+    o.insertAdjacentHTML('afterbegin',
+      '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+      '<path d="M6 2l1.5 2h9L18 2"/><path d="M5 6h14l-1.2 12.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/>' +
+      '<path d="M9 11h6M9 15h4"/></svg> ');
+  }
 });

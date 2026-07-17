@@ -67,11 +67,80 @@
         <div class="size"><b>0,7 l</b><span>1.850 RSD</span></div>
       </div>
 
-      <div class="buystrip" style="margin-top:0">
-        <div class="buystrip__b"><b>Poruči preko Ananasa</b><span>Dostava za 48 sati ili brže &middot; besplatna dostava na platformi</span></div>
-        <a class="btn" href="https://ananas.rs/proizvod/eden-origin-violaverde-liker-od-lavande-sa-notom-vanile-0-5l/1130742" target="_blank" rel="noopener">Poruči 0,5 l</a>
-        <a class="btn btn--ghost" href="https://ananas.rs/proizvod/eden-origin-violaverde-liker-od-lavande-sa-notom-vanile-0-2l/1130741" target="_blank" rel="noopener">Poruči 0,2 l</a>
+      <div class="buy2" id="buy2">
+        <div class="buy2__tabs">
+          <button type="button" class="buy2__tab is-on" onclick="buyTab(0)">Direktna dostava</button>
+          <button type="button" class="buy2__tab" onclick="buyTab(1)">Kupi na Ananasu</button>
+        </div>
+        <div class="buy2__panel" id="buyP0">
+          <div class="buy2__variant">Varijanta 1 &middot; porudžbina i dostava direktno od nas</div>
+          <div class="ord__row">
+            <label for="ordSize">Zapremina</label>
+            <select id="ordSize" onchange="ordCalc()">
+              <option value="1040">0,2 l &middot; 1.040 RSD</option>
+              <option value="1450" selected>0,5 l &middot; 1.450 RSD</option>
+              <option value="1850">0,7 l &middot; 1.850 RSD</option>
+            </select>
+          </div>
+          <div class="ord__row">
+            <label for="ordQty">Količina (broj flaša)</label>
+            <input id="ordQty" type="number" min="1" step="1" value="12" oninput="ordCalc()">
+          </div>
+          <div class="ord__tiers">Popust na veće količine: <b>10 do 20 kom 5%</b> &middot; <b>21 do 50 kom 7%</b> &middot; <b>preko 50 kom 10%</b></div>
+          <div class="ord__calc">
+            <div><span>Cena bez popusta</span><b id="ordSub">17.400 RSD</b></div>
+            <div id="ordDiscRow" class="ord__disc-on"><span>Popust (<span id="ordPct">5%</span>)</span><b id="ordDisc">&minus;870 RSD</b></div>
+            <div class="ord__total"><span>Ukupno za plaćanje</span><b id="ordTotal">16.530 RSD</b></div>
+          </div>
+          <form class="ord__form" id="ordForm" onsubmit="ordSubmit(event)">
+            <input required placeholder="Ime i prezime">
+            <input required placeholder="Telefon">
+            <input required placeholder="Adresa za dostavu">
+            <button class="btn" type="submit" style="justify-content:center">Pošalji porudžbinu</button>
+          </form>
+          <p class="ord__note">Nakon slanja, porudžbina bi se pojavila u CRM-u (kartica Porudžbine) sa količinom, popustom i ukupnim iznosom. Ovo je prototip forme.</p>
+        </div>
+        <div class="buy2__panel" id="buyP1" hidden>
+          <div class="buy2__variant">Varijanta 2 &middot; kupovina preko Ananasa</div>
+          <div class="buystrip" style="margin:0;box-shadow:none;border:0;padding:0">
+            <div class="buystrip__b"><b>Poruči preko Ananasa</b><span>Dostava za 48 sati ili brže &middot; besplatna dostava na platformi</span></div>
+            <a class="btn" href="https://ananas.rs/proizvod/eden-origin-violaverde-liker-od-lavande-sa-notom-vanile-0-5l/1130742" target="_blank" rel="noopener">Poruči 0,5 l</a>
+            <a class="btn btn--ghost" href="https://ananas.rs/proizvod/eden-origin-violaverde-liker-od-lavande-sa-notom-vanile-0-2l/1130741" target="_blank" rel="noopener">Poruči 0,2 l</a>
+          </div>
+        </div>
       </div>
+      <script>
+      function buyTab(i){
+        document.querySelectorAll('#buy2 .buy2__tab').forEach(function(t,k){t.classList.toggle('is-on',k===i);});
+        document.getElementById('buyP0').hidden = (i!==0);
+        document.getElementById('buyP1').hidden = (i!==1);
+      }
+      function ordFmt(n){ return Math.round(n).toLocaleString('sr-RS') + ' RSD'; }
+      function ordTier(q){ if(q>50) return 0.10; if(q>=21) return 0.07; if(q>=10) return 0.05; return 0; }
+      function ordCalc(){
+        var unit = parseFloat(document.getElementById('ordSize').value);
+        var qty = Math.max(1, parseInt(document.getElementById('ordQty').value||'1',10));
+        var sub = unit*qty, pct = ordTier(qty), disc = sub*pct, total = sub-disc;
+        document.getElementById('ordSub').textContent = ordFmt(sub);
+        document.getElementById('ordPct').textContent = Math.round(pct*100)+'%';
+        document.getElementById('ordDisc').innerHTML = (disc>0?'−':'') + ordFmt(disc);
+        document.getElementById('ordTotal').textContent = ordFmt(total);
+        document.getElementById('ordDiscRow').classList.toggle('ord__disc-on', disc>0);
+      }
+      function ordSubmit(e){
+        e.preventDefault();
+        var unit = parseFloat(document.getElementById('ordSize').value);
+        var qty = Math.max(1, parseInt(document.getElementById('ordQty').value||'1',10));
+        var sub = unit*qty, pct = ordTier(qty), total = sub-sub*pct;
+        document.getElementById('buyP0').innerHTML =
+          '<div class="ord__done"><div class="tick">✓</div>'
+          + '<h3 style="margin-bottom:.3rem">Hvala na porudžbini</h3>'
+          + '<p style="font-size:.9rem;color:var(--ink-soft);max-width:34ch;margin:.2rem auto 0">'
+          + qty + ' flaša &middot; popust ' + Math.round(pct*100) + '% &middot; ukupno <b>' + ordFmt(total) + '</b>. '
+          + 'U pravom sistemu ova porudžbina bi se pojavila u CRM-u. Ovo je prototip, porudžbina nije poslata.</p></div>';
+      }
+      ordCalc();
+      </script>
 
       <div class="prod__facts">
         <div class="fact"><b>Sastav</b><span>Prirodni destilat, macerat cveta lavande, vanila, šećer. Bez veštačkih boja i aroma.</span></div>
