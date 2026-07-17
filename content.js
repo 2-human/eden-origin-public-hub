@@ -1,29 +1,28 @@
-/* proposal-hub — per-client CONTENT (window.HUB). Chassis (index.html) reads this.
+/* proposal-hub per-client CONTENT (window.HUB). Chassis (index.html) reads this.
    See the proposal-hub README 'Content map' + content.template.js for the schema.
-   House style: no em-dashes, no emojis in agency voice, hedge audits with may/could/might.
-   Agency voice = American English. Client-voice sample content (website, articles,
-   posts) is written in Eden Origin's Serbian (Latin) for their real market. */
+   Voice: no em dashes anywhere, flowing connected prose, hedge audits with
+   moglo/može. The whole hub is written in Serbian (Latin), Eden Origin's market. */
 var WEB = "website/";
 window.HUB = {
-  title: "Proposal for Eden Origin · North Star Communications",
+  title: "Predlog za Eden Origin · North Star Communications",
   brand: { proposalFor: "Eden Origin",
-    foot: `North Star Communications.<br>A proposal for Eden Origin. Surfaces are review candidates, not the live site.` },
+    foot: `North Star Communications.<br>Predlog za Eden Origin. Sve stranice su predlozi za pregled, a ne živi sajt.` },
   favicon: "favicon.svg",
   defaultView: "intro",
   nav: [
-    { section: "Project", items: [
-      { view: "intro",   label: "Intro" },
-      { view: "recs",    label: "Recommendations" },
-      { view: "who",     label: "Who We Are" },
-      { view: "people",  label: "Key People" }
+    { section: "Predlog", items: [
+      { view: "intro",   label: "Uvod" },
+      { view: "recs",    label: "Preporuke" },
+      { view: "who",     label: "Ko smo mi" },
+      { view: "people",  label: "Ključni ljudi" }
     ]},
-    { section: "Content Engine", items: [
-      { view: "cluster",  label: "Content Cluster" },
-      { view: "articles", label: "Sample Articles", badge: 5 },
-      { view: "website",  label: "Website" }
+    { section: "Sadržaj i sajt", items: [
+      { view: "cluster",  label: "Klaster sadržaja" },
+      { view: "articles", label: "Primeri članaka", badge: 5 },
+      { view: "website",  label: "Sajt" }
     ]},
-    { section: "Social Hub", items: [
-      { view: "social", label: "Organic Posts", badge: 6 }
+    { section: "Društvene mreže", items: [
+      { view: "social", label: "Organske objave", badge: 6 }
     ]}
   ],
   /* LinkedIn/Facebook/Instagram chrome is only used by the built-in renderSocial.
@@ -37,64 +36,60 @@ window.HUB = {
   },
   social: [],
   VIEWS: {
-    intro:    { title: "Intro", sub: "Why we reached out to Eden Origin", open: WEB, openLabel: "Open the website ↗" },
-    recs:     { title: "Recommendations", sub: "What we would build, and why each piece earns its place", open: WEB, openLabel: "Open the website ↗" },
-    who:      { title: "Who We Are", sub: "North Star Communications · approach, services, and work", open: WEB, openLabel: "Open the website ↗" },
-    people:   { title: "Key People", sub: "The people who would run the work" },
-    cluster:  { title: "Content cluster", sub: "Your posts → derived pages → the order, on ananas.rs" },
-    articles: { title: "Sample articles", sub: "Pieces we would publish on your brand · 5 shown, 1 in full" },
-    website:  { title: "Website", sub: "Functional prototype · a home for your posts to link to", open: WEB, openLabel: "Open in new tab ↗", tbBadge: "Functional prototype" },
-    social:   { title: "Organic posts", sub: "Your real Instagram and Facebook, mapped to the pages they would link to", open: "https://www.instagram.com/eden.origin/", openLabel: "Open Instagram ↗" }
+    intro:    { title: "Uvod", sub: "Zašto smo vam se javili", open: WEB, openLabel: "Otvori sajt ↗" },
+    recs:     { title: "Preporuke", sub: "Šta bismo napravili i zašto svaki deo ima svoje mesto", open: WEB, openLabel: "Otvori sajt ↗" },
+    who:      { title: "Ko smo mi", sub: "North Star Communications, naš pristup, usluge i dosadašnji rad", open: WEB, openLabel: "Otvori sajt ↗" },
+    people:   { title: "Ključni ljudi", sub: "Ljudi koji bi vodili posao" },
+    cluster:  { title: "Klaster sadržaja", sub: "Od vaših objava, preko izvedenih stranica, do porudžbine na Ananasu" },
+    articles: { title: "Primeri članaka", sub: "Stranice koje bismo objavili na vašem brendu, prikazano pet, jedna u celini" },
+    website:  { title: "Sajt", sub: "Funkcionalni prototip, dom u koji vaše objave vode", open: WEB, openLabel: "Otvori u novom tabu ↗", tbBadge: "Funkcionalni prototip" },
+    social:   { title: "Organske objave", sub: "Vaše prave objave sa Instagrama i Facebooka, povezane sa stranicama na koje bi vodile", open: "https://www.instagram.com/eden.origin/", openLabel: "Otvori Instagram ↗" }
   },
   clients: [
-    {name:"Belgrade Waterfront", logo:"belgrade-waterfront.svg", desc:"The largest waterfront real estate development project in South East Europe.", did:"SEO, website development, social media management, digital advertising, and photo and video production."},
-    {name:"The Clorox Company", logo:"clorox.svg", desc:"A Fortune 500 consumer goods multinational behind household brands including Clorox, Glad, Brita, Pine-Sol, and Burt's Bees.", did:"A full-scale market test of a new product category. We built a complete ecommerce website and ran social and Google Ads campaigns, driving 10,000 purchases in three months."},
-    {name:"Citibank", logo:"citi.png", desc:"The global consumer bank of Citigroup, one of the world's largest financial institutions, operating across nearly 90 markets.", did:"Rapid demand-testing to validate new products and offerings across North and South American markets: fast-turnaround websites and campaigns for each short cycle, generating thousands of leads."},
-    {name:"Speechify", logo:"speechify.svg", desc:"A text-to-speech and AI voice app that reads books, PDFs and web pages aloud, used by 60M+ people.", did:"An SEO and GEO content engine publishing 50k words a month, until the brand ranked top three for every target keyword and stood as a category leader."},
-    {name:"Semrush", logo:"semrush.svg", desc:"A leading online-visibility and SEO platform spanning search, content, PPC and social, used by marketing teams worldwide.", did:"Wrote Semrush's thought-leadership content on emerging trends, audience shifts and algorithm changes. Every article went viral from the first, and the work earned us a place on their partner list."},
-    {name:"Miss Universe", logo:"miss-universe.png", desc:"One of the world's largest and most-watched beauty pageants, staged across dozens of countries.", did:"Ran a national edition end to end: brand, marketing, SEO, social, and the full event (sponsors, contestants, venue, media, budget). A 1,000-guest show, delivered under budget, on time, and at a profit."},
-    {name:"MVP Workshop", logo:"mvp-workshop.svg", desc:"A Web3 and blockchain solutions studio delivering end-to-end products, from idea to launch.", did:"Lifted SERP performance with a six-pillar content matrix and technical SEO writing that speaks to real buyers, driving a marked rise in top-keyword rankings and target-audience traffic."},
-    {name:"Inery", logo:"inery.svg", desc:"Enterprise-grade decentralized data infrastructure and developer tooling for distributed systems.", did:"The full global launch of a new blockchain project (PR, partnerships, community, team, ads) in two months. On launch day the token jumped from its $0.14 ICO to $0.69 within six hours."}
+    {name:"Belgrade Waterfront", logo:"belgrade-waterfront.svg", desc:"Najveći projekat razvoja nekretnina na obali u jugoistočnoj Evropi.", did:"SEO, izrada sajta, vođenje društvenih mreža, digitalno oglašavanje i foto i video produkcija."},
+    {name:"The Clorox Company", logo:"clorox.svg", desc:"Multinacionalna kompanija sa Fortune 500 liste, iza brendova za domaćinstvo poput Clorox, Glad, Brita, Pine-Sol i Burt's Bees.", did:"Potpuni tržišni test nove kategorije proizvoda. Napravili smo kompletan onlajn prodajni sajt i vodili kampanje na društvenim mrežama i Google-u, i doveli do 10.000 kupovina za tri meseca."},
+    {name:"Citibank", logo:"citi.png", desc:"Globalna banka za građane iz sastava Citigroup-a, jedne od najvećih finansijskih institucija na svetu, prisutne na skoro 90 tržišta.", did:"Brzo testiranje tražnje za nove proizvode i ponude na tržištima Severne i Južne Amerike: sajtovi i kampanje sa brzim rokom za svaki kratak ciklus, koji su generisali hiljade kontakata."},
+    {name:"Speechify", logo:"speechify.svg", desc:"Aplikacija za pretvaranje teksta u govor i veštačke glasove koja naglas čita knjige, PDF-ove i veb stranice, koju koristi preko 60 miliona ljudi.", did:"SEO i GEO motor sadržaja koji je objavljivao 50 hiljada reči mesečno, dok brend nije došao među prva tri rezultata za svaku ciljanu reč i postao lider kategorije."},
+    {name:"Semrush", logo:"semrush.svg", desc:"Vodeća platforma za onlajn vidljivost i SEO koja pokriva pretragu, sadržaj, PPC i društvene mreže, koju marketing timovi koriste širom sveta.", did:"Pisali smo Semrush-ov sadržaj o novim trendovima, promenama publike i algoritama. Svaki članak je od prvog postao viralan, a rad nam je doneo mesto na njihovoj listi partnera."},
+    {name:"Miss Universe", logo:"miss-universe.png", desc:"Jedan od najvećih i najgledanijih izbora lepote na svetu, koji se održava u desetinama zemalja.", did:"Vodili smo nacionalno izdanje od početka do kraja: brend, marketing, SEO, društvene mreže i ceo događaj (sponzori, takmičarke, prostor, mediji, budžet). Šou sa 1.000 gostiju, isporučen ispod budžeta, na vreme i sa profitom."},
+    {name:"MVP Workshop", logo:"mvp-workshop.svg", desc:"Studio za Web3 i blockchain rešenja koji isporučuje proizvode od ideje do lansiranja.", did:"Podigli smo poziciju u pretrazi kroz matricu sadržaja sa šest stubova i tehničko SEO pisanje koje govori pravim kupcima, uz primetan rast rangiranja za ključne reči i saobraćaja ciljane publike."},
+    {name:"Inery", logo:"inery.svg", desc:"Decentralizovana infrastruktura za podatke i alati za programere namenjeni distribuiranim sistemima, na nivou velikih preduzeća.", did:"Potpuno globalno lansiranje novog blockchain projekta (PR, partnerstva, zajednica, tim, oglasi) za dva meseca. Na dan lansiranja token je skočio sa 0,14 dolara na 0,69 dolara u roku od šest sati."}
   ],
   html: {
     intro: `
     <div class="brief">
-      <p class="brief__eyebrow">North Star Communications &middot; Proposal for Eden Origin</p>
-      <h1>Introduction</h1>
-      <p class="brief__lede">This proposal did not begin with a brief from you. It began with your feed. We came across the Eden Origin story, the lavender you grow and pick by hand in Milićevci, the ViolaVerde bottle, the cocktails and the desserts, and thought the product deserves a home online as considered as the product itself. So rather than describe what we would do, we built a piece of it on your own brand.</p>
-      <blockquote class="brief__quote">&ldquo;Da bismo ublažili jaku aromu lavande u miksologiji, prvi proizvod smo omekšali vanilom, a drugi borovnicom.&rdquo;<cite>Ana Tomašević, Eden Origin</cite></blockquote>
+      <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
+      <h1>Uvod</h1>
+      <p class="brief__lede">Ovaj predlog nije počeo od vašeg upita, počeo je od vašeg profila. Naišli smo na priču Eden Origina, na lavandu koju gajite i berete rukom u Milićevcima, na flašu ViolaVerde, na koktele i deserte, i pomislili da taj proizvod zaslužuje mesto na internetu koje je osmišljeno pažljivo koliko i on sam. Zato nismo hteli da vam opisujemo šta bismo radili, već smo jedan deo toga napravili, i to na vašem brendu.</p>
+      <blockquote class="brief__quote">&bdquo;Da bismo ublažili jaku aromu lavande u miksologiji, prvi proizvod smo omekšali vanilom, a drugi borovnicom.&ldquo;<cite>Ana Tomašević, Eden Origin</cite></blockquote>
       <div class="brief__body">
-        <p>Here is what we noticed, and why we reached out:</p>
-        <ul>
-          <li>Your posts are genuinely good. The photography, the field, the pour, the plating: they already do the hard part, which is making someone want the product.</li>
-          <li>But a post is a moment. Someone taps a lovely photo of a Viola spritz, and then there is nowhere for that interest to land, no recipe to save, no page to read, and no obvious way to order.</li>
-          <li>You sell through the ananas.rs listing, which is fine for a transaction, but it cannot tell the story, hold the recipes, or turn a casual follower into a repeat customer.</li>
-          <li>Search and AI assistants cannot see any of it. A brand this distinctive is close to invisible the moment someone types "liker od lavande" or asks an assistant what to bring as a gift.</li>
-        </ul>
-        <p>So the job is not more posts. You said it yourself, the posts are already great. The job is to give them somewhere to go: <b>a website built around your existing content, that each post links to, and that leads to the order.</b> Every recipe you have already shot becomes a page. Every page carries the product and the way to buy it. And the whole thing is written so search and AI engines can finally find you.</p>
-        <p><b>Everything in this hub is built, not described.</b> Start with <b>Recommendations</b> for the thinking. <b>Who We Are</b> and <b>Key People</b> show who you would actually work with. The <b>Content Engine</b> is the substance: a content cluster that turns your posts into a path to purchase, sample articles already live on the rebuilt site, and the functional website itself. Then <b>Organic Posts</b> shows your real Instagram and Facebook, each mapped to the page we would have it link to.</p>
-        <p class="brief__aside">You built the product and the audience. This is about making the two meet, and turning a tap into an order.</p>
+        <p>Evo šta smo primetili i zbog čega smo vam se javili.</p>
+        <p>Vaše objave su zaista dobre. Fotografije, polje lavande, čaša koja se puni, tanjir koji se servira, sve to već radi najteži deo posla, a to je da neko poželi vaš proizvod. Problem je što je objava samo trenutak. Neko lajkuje prelepu fotografiju Viola spritza, i tu se sve završava, jer nema recepta da se sačuva, nema stranice da se pročita, ni jasnog načina da se poruči.</p>
+        <p>Prodaja ide preko oglasa na Ananasu, što je sasvim u redu za samu kupovinu, ali taj oglas ne može da ispriča priču, ne može da drži recepte, niti da povremenog pratioca pretvori u stalnog kupca. A pretraživači i veštačka inteligencija sve to i ne vide. Ovako prepoznatljiv brend postaje gotovo nevidljiv čim neko ukuca &bdquo;liker od lavande&ldquo; ili pita asistenta šta da ponese kao poklon.</p>
+        <p>Zato zadatak nije da se pravi više objava. I sami ste rekli, objave su već sjajne. Zadatak je da im se da mesto na koje vode, a to je <b>sajt izgrađen oko vašeg postojećeg sadržaja, na koji svaka objava vodi i koji se završava porudžbinom.</b> Svaki recept koji ste već snimili postaje stranica, svaka stranica nosi proizvod i način da se kupi, a sve je napisano tako da vas pretraživači i veštačka inteligencija konačno pronađu.</p>
+        <p><b>Sve u ovom hubu je napravljeno, a ne opisano.</b> Krenite od <b>Preporuka</b> da vidite razmišljanje iza svega. <b>Ko smo mi</b> i <b>Ključni ljudi</b> pokazuju sa kim biste zaista radili. <b>Sadržaj i sajt</b> su suština: klaster sadržaja koji vaše objave pretvara u put do kupovine, primeri članaka koji su već objavljeni na novom sajtu, i sam funkcionalni sajt. Na kraju, <b>Organske objave</b> pokazuju vaše prave objave sa Instagrama i Facebooka, svaku povezanu sa stranicom na koju bi vodila.</p>
+        <p class="brief__aside">Vi ste izgradili i proizvod i publiku. Ovo je o tome da se to dvoje spoji, i da se jedan lajk pretvori u porudžbinu.</p>
       </div>
-      <div class="brief__foot"><div class="brief__star" aria-hidden="true"></div><p>North Star Communications. Prepared for Eden Origin.</p></div>
+      <div class="brief__foot"><div class="brief__star" aria-hidden="true"></div><p>North Star Communications. Pripremljeno za Eden Origin.</p></div>
     </div>
   `,
     recs: `
     <div class="brief">
-      <p class="brief__eyebrow">North Star Communications &middot; Proposal for Eden Origin</p>
-      <h1>Recommendations</h1>
-      <p class="brief__lede">This is the case for the work shown across this hub. Not a list of tactics, but one connected system that turns the content you already make into orders, and makes Eden Origin something search and AI assistants can actually find. Here is what we would build, and why each piece earns its place.</p>
+      <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
+      <h1>Preporuke</h1>
+      <p class="brief__lede">Ovo je obrazloženje za sve što je prikazano u ovom hubu. Nije spisak taktika, već jedan povezan sistem koji sadržaj koji već pravite pretvara u porudžbine, i čini Eden Origin nečim što pretraživači i veštačka inteligencija zaista mogu da pronađu. Evo šta bismo napravili i zašto svaki deo ima svoje mesto.</p>
 
       <div class="brief__sec">
         <p class="brief__num">01</p>
         <div class="brief__body">
-          <h2>Where you stand today</h2>
-          <p>You have a rare thing: a distinctive product with a real story and a following that already engages. The digital presence around it may not yet be doing that story justice. We looked at each asset the way a new customer, or an AI assistant, would. This is a snapshot and some of it could shift as things change, but a pattern comes through: excellent content, with nowhere for it to lead.</p>
+          <h2>Gde ste danas</h2>
+          <p>Imate nešto retko, a to je prepoznatljiv proizvod sa pravom pričom i publiku koja već reaguje. Digitalno prisustvo oko svega toga možda još ne prati koliko je priča jaka. Pogledali smo svaki deo onako kako bi to uradio novi kupac ili asistent veštačke inteligencije. Ovo je trenutni snimak i ponešto bi moglo da se promeni kako stvari idu, ali obrazac je jasan: odličan sadržaj koji nema kuda da vodi.</p>
           <div class="state">
-            <div class="state__row"><div class="state__k">Instagram &amp; Facebook</div><div class="state__v">Genuinely strong. The lavender-field shots, the Viola cocktails, the desserts and the summer serves already make people want the product. The gap is what happens next: a post may be the end of the road rather than the start of one, with no page to save, no recipe to keep, and the order two or three taps away at best.</div></div>
-            <div class="state__row"><div class="state__k">Website</div><div class="state__v">We could not find a dedicated Eden Origin website. That likely means the brand story, the recipes and the products live only inside individual posts, which disappear down the feed, and inside the ananas.rs listing, which cannot hold any of it. A brand with this much content may be leaving most of its value uncaptured.</div></div>
-            <div class="state__row"><div class="state__k">Ordering path</div><div class="state__v">Selling through ananas.rs is a sensible start and we would keep it. But the path from "I saw a beautiful post" to "I placed an order" appears to rely on someone remembering the brand and searching a marketplace later. Every step between interest and checkout is a place the sale can quietly fall away.</div></div>
-            <div class="state__row"><div class="state__k">SEO &amp; GEO</div><div class="state__v">On a few quick searches for terms like "liker od lavande" and "pokloni od lavande", it was not obvious that Eden Origin surfaces, though that could reflect the query or the region. With no website, there is little for search engines to rank and almost nothing structured for an AI assistant to read or cite when someone asks for a gift or a cocktail. The most distinctive thing about you could be the hardest thing to find.</div></div>
-            <div class="state__row"><div class="state__k">Press &amp; proof</div><div class="state__v">You have earned real coverage and a grant of ten thousand pounds against eighty applicants. That is a strong trust signal, but it appears to live in a handful of articles rather than anywhere you own. Collected and framed on your own site, it could work far harder.</div></div>
+            <div class="state__row"><div class="state__k">Instagram i Facebook</div><div class="state__v">Zaista jaki. Kadrovi iz polja lavande, Viola kokteli, deserti i letnja osveženja već navode ljude da požele proizvod. Problem je ono što dolazi posle, jer objava često bude kraj puta umesto početka, bez stranice koja se sačuva, bez recepta koji ostaje, a porudžbina je u najboljem slučaju udaljena dva ili tri koraka.</div></div>
+            <div class="state__row"><div class="state__k">Sajt</div><div class="state__v">Nismo pronašli poseban sajt Eden Origina. To verovatno znači da priča o brendu, recepti i proizvodi žive samo unutar pojedinačnih objava, koje nestaju u feedu, i unutar oglasa na Ananasu, koji ništa od toga ne može da zadrži. Brend sa ovoliko sadržaja možda ostavlja najveći deo svoje vrednosti neiskorišćen.</div></div>
+            <div class="state__row"><div class="state__k">Put do porudžbine</div><div class="state__v">Prodaja preko Ananasa je razuman početak i mi bismo je zadržali. Ali put od &bdquo;video sam lepu objavu&ldquo; do &bdquo;poručio sam&ldquo; izgleda da se oslanja na to da neko zapamti brend i kasnije ga potraži na marketplejsu. Svaki korak između interesovanja i kupovine je mesto na kome prodaja može tiho da se izgubi.</div></div>
+            <div class="state__row"><div class="state__k">SEO i GEO</div><div class="state__v">Na nekoliko brzih pretraga za pojmove poput &bdquo;liker od lavande&ldquo; i &bdquo;pokloni od lavande&ldquo; nije bilo očigledno da se Eden Origin pojavljuje, mada to može zavisiti od same pretrage ili regiona. Bez sajta, pretraživači imaju malo šta da rangiraju, a asistentu veštačke inteligencije gotovo ništa struktuirano da pročita ili citira kada neko traži poklon ili koktel. Ono najprepoznatljivije kod vas moglo bi biti i najteže za pronaći.</div></div>
+            <div class="state__row"><div class="state__k">Mediji i dokazi</div><div class="state__v">Osvojili ste pravu medijsku pažnju i grant od deset hiljada funti u konkurenciji od osamdeset prijavljenih. To je snažan znak poverenja, ali izgleda da živi u nekoliko članaka, a ne na mestu koje je vaše. Sakupljeno i lepo predstavljeno na sopstvenom sajtu, moglo bi da radi mnogo više.</div></div>
           </div>
         </div>
       </div>
@@ -102,28 +97,28 @@ window.HUB = {
       <div class="brief__sec">
         <p class="brief__num">02</p>
         <div class="brief__body">
-          <h2>The strategy: turn posts into pages, and pages into orders</h2>
-          <p>The objective is simple: sell more bottles to the people who already like what they see. No single tactic does that. It takes your content, a place for it to land, and a clear path to purchase, working as one system.</p>
-          <p><b>Give every post somewhere to go.</b> The content you make is top-of-funnel gold. What it lacks is a destination. So we build the destination first: a website where each recipe, each field story and each product has its own page, and where every page carries the product and the way to order it.</p>
-          <p><b>Answer the real question, then sell.</b> People do not search for "liker"; they search for "koktel od lavande", "šta pokloniti", "recept sa lavandom". We write pages around those questions, matched to how people actually search, and let the product ride along inside the answer. It is the food-and-drink version of leading with the useful thing, not the feature list.</p>
-          <p><b>Make it machine-readable.</b> The durable way to be found now is to be genuinely extractable: a page per question, recipes and products marked up with structured data so Google can show them as rich results and an AI assistant can read and recommend them. Structured content is reported to be surfaced and cited far more often than the same words in a caption.</p>
-          <p><b>Own the asset.</b> A marketplace listing is rented space. A website, its content and its search visibility are yours, and they keep working after any single post scrolls away.</p>
-          <p class="brief__aside">Every item in this hub plays a part in that system, or proves that it worked.</p>
+          <h2>Strategija: pretvoriti objave u stranice, a stranice u porudžbine</h2>
+          <p>Cilj je jednostavan, prodati više flaša ljudima kojima se već sviđa ono što vide. To ne postiže nijedna pojedinačna taktika. Potreban je vaš sadržaj, mesto na koje sleti, i jasan put do kupovine, sve povezano u jedan sistem.</p>
+          <p><b>Dajte svakoj objavi kuda da vodi.</b> Sadržaj koji pravite je zlato na vrhu levka, samo mu nedostaje odredište. Zato prvo gradimo odredište, sajt na kome svaki recept, svaka priča iz polja i svaki proizvod imaju svoju stranicu, i na kome svaka stranica nosi proizvod i način da se poruči.</p>
+          <p><b>Odgovorite na pravo pitanje, pa onda prodajte.</b> Ljudi ne pretražuju &bdquo;liker&ldquo;, oni pretražuju &bdquo;koktel od lavande&ldquo;, &bdquo;šta pokloniti&ldquo;, &bdquo;recept sa lavandom&ldquo;. Mi pišemo stranice oko tih pitanja, prilagođene načinu na koji ljudi zaista traže, a proizvod prirodno putuje unutar odgovora. To je verzija za hranu i piće onog pravila da se prvo istakne korisna stvar, a ne spisak osobina.</p>
+          <p><b>Neka bude čitljivo i za mašine.</b> Trajan način da vas pronađu danas jeste da budete zaista laki za iščitavanje: stranica po pitanju, recepti i proizvodi obeleženi struktuiranim podacima tako da ih Google prikaže kao bogate rezultate, a asistent veštačke inteligencije pročita i preporuči. Za struktuiran sadržaj se navodi da se prikazuje i citira znatno češće nego iste reči u opisu ispod objave.</p>
+          <p><b>Neka to bude vaše.</b> Oglas na marketplejsu je iznajmljen prostor. Sajt, njegov sadržaj i vidljivost u pretrazi su vaši, i nastavljaju da rade i pošto pojedinačna objava odavno nestane u feedu.</p>
+          <p class="brief__aside">Svaka stavka u ovom hubu ima ulogu u tom sistemu, ili dokazuje da je sistem proradio.</p>
         </div>
       </div>
 
       <div class="brief__sec">
         <p class="brief__num">03</p>
         <div class="brief__body">
-          <h2>What we would build</h2>
-          <p>Each surface in this hub maps to a specific gap above, and to a specific reason it moves the needle.</p>
+          <h2>Šta bismo napravili</h2>
+          <p>Svaka celina u ovom hubu odgovara na tačno određenu prazninu iz prethodnog dela, i na tačno određen razlog zbog kog pomera stvari napred.</p>
           <div class="ledger">
-            <div class="ledger__head"><span>Surface</span><span>Today</span><span>What we build</span><span>Why it could win</span></div>
-            <div class="ledger__row"><span class="lg-seg">Website</span><span class="lg-now">No dedicated site; story and recipes live only in posts.</span><span class="lg-build">A boutique Serbian website: brand story, product pages and a recipe library, each page built to carry the product and the order.</span><span class="lg-why">Turns scattered posts into an owned asset that gets found, gets saved, and gets shopped.</span></div>
-            <div class="ledger__row"><span class="lg-seg">Product pages</span><span class="lg-now">Only the ananas.rs listing, which cannot tell the story.</span><span class="lg-build">A page per product (ViolaVerde vanila and borovnica, Ramonda sirup) with the making, the serving, and a clear order button to ananas.rs.</span><span class="lg-why">Gives every recipe and post a product to point at, and a one-tap path to buy.</span></div>
-            <div class="ledger__row"><span class="lg-seg">Content cluster</span><span class="lg-now">Great posts with nothing linking them together.</span><span class="lg-build">A cluster: recipes and guides link to the product pillar, which links to the order, all amplified by the posts you already make.</span><span class="lg-why">A structure that carries a casual follower from a cocktail photo to a placed order.</span></div>
-            <div class="ledger__row"><span class="lg-seg">SEO &amp; GEO</span><span class="lg-now">Little to rank; nothing structured for AI to read.</span><span class="lg-build">Recipe, Product and Organization schema, question-led pages, and the story and press framed as verifiable facts.</span><span class="lg-why">Rich results in Google and answers an AI assistant can quote when someone asks for a gift or a cocktail.</span></div>
-            <div class="ledger__row"><span class="lg-seg">Organic posts</span><span class="lg-now">Beautiful, but each is a dead end.</span><span class="lg-build">The same posts, now each with a destination: a link in bio and per-post to the exact page it belongs to.</span><span class="lg-why">Every post you have already made starts working as a doorway to the shop, not just a moment in the feed.</span></div>
+            <div class="ledger__head"><span>Celina</span><span>Danas</span><span>Šta gradimo</span><span>Zašto bi uspelo</span></div>
+            <div class="ledger__row"><span class="lg-seg">Sajt</span><span class="lg-now">Nema posebnog sajta, priča i recepti žive samo u objavama.</span><span class="lg-build">Butik sajt na srpskom: priča o brendu, stranice proizvoda i biblioteka recepata, gde je svaka stranica napravljena da nosi proizvod i porudžbinu.</span><span class="lg-why">Razbacane objave pretvara u imovinu koja je vaša, koja se pronalazi, čuva i kupuje.</span></div>
+            <div class="ledger__row"><span class="lg-seg">Stranice proizvoda</span><span class="lg-now">Samo oglas na Ananasu, koji ne može da ispriča priču.</span><span class="lg-build">Stranica po proizvodu (ViolaVerde vanila i borovnica, Ramonda sirup) sa načinom nastanka, služenjem i jasnim dugmetom za porudžbinu na Ananasu.</span><span class="lg-why">Daje svakom receptu i svakoj objavi proizvod na koji vode, i kupovinu na jedan klik.</span></div>
+            <div class="ledger__row"><span class="lg-seg">Klaster sadržaja</span><span class="lg-now">Sjajne objave koje ništa ne povezuje.</span><span class="lg-build">Klaster u kome recepti i vodiči vode ka stranici proizvoda, koja vodi ka porudžbini, a sve to pojačavaju objave koje ionako pravite.</span><span class="lg-why">Struktura koja povremenog pratioca vodi od fotografije koktela do porudžbine.</span></div>
+            <div class="ledger__row"><span class="lg-seg">SEO i GEO</span><span class="lg-now">Malo toga za rangiranje, ništa struktuirano za veštačku inteligenciju.</span><span class="lg-build">Šeme za recepte, proizvode i organizaciju, stranice vođene pitanjima, i priča i mediji predstavljeni kao proverljive činjenice.</span><span class="lg-why">Bogati rezultati u Google-u i odgovori koje asistent veštačke inteligencije može da citira kada neko traži poklon ili koktel.</span></div>
+            <div class="ledger__row"><span class="lg-seg">Organske objave</span><span class="lg-now">Prelepe, ali svaka je slepa ulica.</span><span class="lg-build">Iste objave, sada svaka sa odredištem: link u opisu profila i po objavi ka tačno onoj stranici kojoj pripada.</span><span class="lg-why">Svaka objava koju ste već napravili počinje da radi kao vrata ka prodavnici, a ne samo kao trenutak u feedu.</span></div>
           </div>
         </div>
       </div>
@@ -131,36 +126,36 @@ window.HUB = {
       <div class="brief__sec">
         <p class="brief__num">04</p>
         <div class="brief__body">
-          <h2>How it all adds up to more orders</h2>
-          <p>Your goal is straightforward: more bottles sold to people who already love the look of it. Everything here points at that, and the pieces may work best together rather than alone. It runs as one path.</p>
-          <p><b>Get found.</b> A website and recipe library written the way people actually search, structured so Google and AI engines can read it, so more of the people who would love ViolaVerde come across it in the first place. <b>Get saved.</b> Recipes and a story worth keeping, so a passing tap becomes a bookmark and a return visit. <b>Get bought.</b> Every page carries the product and a clear order button to ananas.rs, so interest turns into a purchase in one step rather than three. <b>Compound.</b> Each post now links to a page, each page holds its search ranking, and the whole thing keeps working long after the post scrolls away.</p>
-          <p>Each part feeds the next. A saved recipe may bring someone back; a page that ranks may reach someone new; a clear order button turns both into a sale. Nothing here rents its position: it builds an asset you own that keeps earning after any single post is gone.</p>
-          <p class="brief__aside">We would sequence it so the fastest wins move first: the website and product pages, then the recipe cluster and the per-post links, so your existing audience has somewhere to go within weeks, not months.</p>
+          <h2>Kako se sve to sabira u više porudžbina</h2>
+          <p>Vaš cilj je jasan, više prodatih flaša ljudima kojima se već sviđa kako sve to izgleda. Sve ovde vodi ka tome, a delovi najbolje rade zajedno, a ne pojedinačno. Sve teče kao jedan put.</p>
+          <p>Da vas pronađu, tu su sajt i biblioteka recepata napisani onako kako ljudi zaista pretražuju, struktuirani tako da ih Google i veštačka inteligencija čitaju, pa na vas naiđe više onih koji bi zavoleli ViolaVerde. Da vas sačuvaju, tu su recepti i priča vredni čuvanja, tako da usputni lajk postane obeležena stranica i novi dolazak. Da kupe, tu je svaka stranica koja nosi proizvod i jasno dugme za porudžbinu na Ananasu, pa se interesovanje pretvara u kupovinu u jednom koraku umesto u tri. I da se to nagomilava, jer svaka objava sada vodi na stranicu, svaka stranica drži svoju poziciju u pretrazi, i celina nastavlja da radi dugo pošto objava nestane.</p>
+          <p>Svaki deo hrani sledeći. Sačuvan recept može nekog da vrati, dobro rangirana stranica može da dopre do nekog novog, a jasno dugme za porudžbinu i jedno i drugo pretvara u prodaju. Ništa ovde ne iznajmljuje svoju poziciju, već gradi imovinu koja je vaša i koja nastavlja da zarađuje i kad pojedinačna objava odavno prođe.</p>
+          <p class="brief__aside">Redosled bismo postavili tako da prve stignu najbrže pobede, sajt i stranice proizvoda, pa potom klaster recepata i linkovi po objavi, tako da vaša postojeća publika dobije kuda da ode za nedelje, a ne mesece.</p>
         </div>
       </div>
 
       <div class="brief__foot">
         <div class="brief__star" aria-hidden="true"></div>
-        <p>North Star Communications. Prepared for Eden Origin. Sample content shown across this hub is illustrative until confirmed.</p>
+        <p>North Star Communications. Pripremljeno za Eden Origin. Primeri sadržaja u ovom hubu su ilustrativni do potvrde.</p>
       </div>
     </div>
   `,
     who: `
     <div class="brief">
-      <p class="brief__eyebrow">North Star Communications &middot; Proposal for Eden Origin</p>
-      <h1>Who we are</h1>
-      <p class="brief__lede">North Star Communications helps organizations close the gap between what they are and how they communicate. We work at the moments when communications become consequential, and we stay close enough to your team that the work feels genuine rather than produced. Everything your business needs, under one roof.</p>
+      <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
+      <h1>Ko smo mi</h1>
+      <p class="brief__lede">North Star Communications pomaže organizacijama da zatvore jaz između onoga što jesu i načina na koji to saopštavaju. Radimo u trenucima kada komunikacija postane važna, i ostajemo dovoljno blizu vašem timu da rad deluje iskreno, a ne fabrički. Sve što vašem poslu treba, na jednom mestu.</p>
 
       <div class="brief__sec">
         <p class="brief__num">01</p>
         <div class="brief__body">
-          <h2>How we think</h2>
-          <p>We listen, we learn, we adapt, and we deliver. That rhythm is held together by four values that decide how we make trade-offs when the work gets hard.</p>
+          <h2>Kako razmišljamo</h2>
+          <p>Slušamo, učimo, prilagođavamo se i isporučujemo. Taj ritam drže na okupu četiri vrednosti koje odlučuju kako pravimo ustupke kada posao postane težak.</p>
           <div class="vals">
-            <div class="val"><b>Human First</b><span>Technology brings people closer together. It does not replace the relationship at the center of good communication.</span></div>
-            <div class="val"><b>Zero Distance</b><span>The best communications disappear. We work toward value flowing both ways, with no friction and no noise.</span></div>
-            <div class="val"><b>Sustainable Growth</b><span>Fast is not the same as healthy. We build growth that matches your capacity and compounds over time.</span></div>
-            <div class="val"><b>Resilient Outcomes</b><span>Markets shift and plans change. The work is designed so every outcome makes the next one stronger.</span></div>
+            <div class="val"><b>Čovek na prvom mestu</b><span>Tehnologija zbližava ljude, ali ne zamenjuje odnos koji je u srcu dobre komunikacije.</span></div>
+            <div class="val"><b>Bez razdaljine</b><span>Najbolja komunikacija se ne primećuje. Radimo na tome da vrednost teče u oba smera, bez trenja i bez šuma.</span></div>
+            <div class="val"><b>Održiv rast</b><span>Brzo nije isto što i zdravo. Gradimo rast koji prati vaše kapacitete i koji se vremenom nagomilava.</span></div>
+            <div class="val"><b>Otporni rezultati</b><span>Tržišta se menjaju i planovi se menjaju. Posao je osmišljen tako da svaki rezultat ojača sledeći.</span></div>
           </div>
         </div>
       </div>
@@ -168,25 +163,25 @@ window.HUB = {
       <div class="brief__sec">
         <p class="brief__num">02</p>
         <div class="brief__body">
-          <h2>How we work</h2>
-          <p>We start by getting two things clear: who you are trying to reach, and what you actually want them to do. They sound obvious, but most marketing underdelivers because one of them was fuzzy from the start. We get them right before we spend any of your budget.</p>
-          <p>From there we work in small, complete steps rather than one long plan you have to sign off up front. We put something real in front of your audience, watch what they actually do, and keep what works while dropping what does not. Each step teaches us something we carry into the next, so the work gets sharper as it goes and you can see it paying off along the way. We start focused, prove it out, and widen only once the results are there to back it.</p>
+          <h2>Kako radimo</h2>
+          <p>Počinjemo tako što razjasnimo dve stvari, koga želite da dosegnete i šta zaista želite da ti ljudi urade. Zvuči očigledno, ali većina marketinga podbaci baš zato što je jedno od to dvoje bilo maglovito od samog početka. Mi ih postavimo kako treba pre nego što potrošimo dinar vašeg budžeta.</p>
+          <p>Odatle radimo u malim, zaokruženim koracima, a ne po jednom dugačkom planu koji morate da odobrite unapred. Stavimo nešto stvarno pred vašu publiku, gledamo šta zaista rade, i zadržavamo ono što funkcioniše dok odbacujemo ono što ne. Svaki korak nas nauči nečemu što nosimo u sledeći, pa posao postaje sve oštriji kako ide, a vi vidite da se isplati usput. Krenemo fokusirano, dokažemo da radi, i širimo tek kada rezultati to potvrde.</p>
         </div>
       </div>
 
       <div class="brief__sec">
         <p class="brief__num">03</p>
         <div class="brief__body">
-          <h2>What we do</h2>
-          <p>Seven service lines, drawn on in whatever combination the work calls for. This engagement leans on Content and Copywriting, Web and App Development, Digital Marketing, and Design and Production.</p>
+          <h2>Šta radimo</h2>
+          <p>Sedam linija usluga, koje kombinujemo onako kako posao traži. Ovaj angažman se najviše oslanja na sadržaj i kopirajting, izradu sajtova i aplikacija, digitalni marketing i dizajn i produkciju.</p>
           <div class="svc">
-            <div class="svc__row"><div class="svc__name">Research &amp; Strategy</div><div class="svc__desc">Understand your market and your audience, then turn that into a plan built to move you forward.<span class="svc__tags">Competitive analysis &middot; audience research &middot; positioning &middot; strategy</span></div></div>
-            <div class="svc__row"><div class="svc__name">Content &amp; Copywriting</div><div class="svc__desc">Words and stories that earn attention and turn readers into customers.<span class="svc__tags">Storytelling &middot; SEO and GEO copy &middot; recipes and articles &middot; conversion copy</span></div></div>
-            <div class="svc__row"><div class="svc__name">Web &amp; App Development</div><div class="svc__desc">Build the websites and shops your customers use, fast, reliable, and made to convert.<span class="svc__tags">Websites &middot; product pages &middot; landing pages &middot; ecommerce and integrations</span></div></div>
-            <div class="svc__row"><div class="svc__name">Digital Marketing</div><div class="svc__desc">Reach the right people across search and social, and turn that reach into results.<span class="svc__tags">SEO and GEO &middot; social media &middot; Meta Ads &middot; Google Ads</span></div></div>
-            <div class="svc__row"><div class="svc__name">Design &amp; Production</div><div class="svc__desc">Bring it all to life with design and video made for where people actually watch.<span class="svc__tags">Video &middot; graphic design &middot; packaging and labels &middot; production</span></div></div>
-            <div class="svc__row"><div class="svc__name">Branding</div><div class="svc__desc">Shape how you look and what you stand for, so you are recognized and remembered.<span class="svc__tags">Identity design &middot; storytelling &middot; guidelines &middot; mission, vision and values</span></div></div>
-            <div class="svc__row"><div class="svc__name">PR</div><div class="svc__desc">Manage how the world sees you, from everyday reputation to the moments that matter most.<span class="svc__tags">Reputation management &middot; press releases &middot; presentations &middot; crisis response</span></div></div>
+            <div class="svc__row"><div class="svc__name">Istraživanje i strategija</div><div class="svc__desc">Razumemo vaše tržište i vašu publiku, pa to pretvorimo u plan koji vas pomera napred.<span class="svc__tags">Analiza konkurencije &middot; istraživanje publike &middot; pozicioniranje &middot; strategija</span></div></div>
+            <div class="svc__row"><div class="svc__name">Sadržaj i kopirajting</div><div class="svc__desc">Reči i priče koje zaslužuju pažnju i pretvaraju čitaoce u kupce.<span class="svc__tags">Pripovedanje &middot; SEO i GEO tekstovi &middot; recepti i članci &middot; prodajni tekstovi</span></div></div>
+            <div class="svc__row"><div class="svc__name">Izrada sajtova i aplikacija</div><div class="svc__desc">Gradimo sajtove i prodavnice koje vaši kupci koriste, brze, pouzdane i napravljene da prodaju.<span class="svc__tags">Sajtovi &middot; stranice proizvoda &middot; lending stranice &middot; prodaja i integracije</span></div></div>
+            <div class="svc__row"><div class="svc__name">Digitalni marketing</div><div class="svc__desc">Dosegnemo prave ljude kroz pretragu i društvene mreže, i taj domet pretvorimo u rezultate.<span class="svc__tags">SEO i GEO &middot; društvene mreže &middot; Meta oglasi &middot; Google oglasi</span></div></div>
+            <div class="svc__row"><div class="svc__name">Dizajn i produkcija</div><div class="svc__desc">Sve to oživljavamo dizajnom i videom napravljenim za mesta na kojima ljudi zaista gledaju.<span class="svc__tags">Video &middot; grafički dizajn &middot; ambalaža i etikete &middot; produkcija</span></div></div>
+            <div class="svc__row"><div class="svc__name">Brendiranje</div><div class="svc__desc">Oblikujemo kako izgledate i za šta stojite, tako da vas prepoznaju i pamte.<span class="svc__tags">Vizuelni identitet &middot; pripovedanje &middot; smernice &middot; misija, vizija i vrednosti</span></div></div>
+            <div class="svc__row"><div class="svc__name">Odnosi s javnošću</div><div class="svc__desc">Vodimo brigu o tome kako vas svet vidi, od svakodnevne reputacije do trenutaka koji najviše znače.<span class="svc__tags">Upravljanje reputacijom &middot; saopštenja &middot; prezentacije &middot; krizno komuniciranje</span></div></div>
           </div>
         </div>
       </div>
@@ -194,44 +189,44 @@ window.HUB = {
       <div class="brief__sec">
         <p class="brief__num">04</p>
         <div class="brief__body">
-          <h2>Who we have worked with</h2>
-          <p>A selection of the brands and organizations our team has delivered for, from venture-backed software to global consumer names.</p>
+          <h2>S kim smo radili</h2>
+          <p>Izbor brendova i organizacija za koje je naš tim isporučivao rezultate, od softverskih startapa do globalnih potrošačkih imena.</p>
           <div class="cwall" id="whoWall"></div>
         </div>
       </div>
 
       <div class="brief__foot">
         <div class="brief__star" aria-hidden="true"></div>
-        <p>North Star Communications. Prepared for Eden Origin.</p>
+        <p>North Star Communications. Pripremljeno za Eden Origin.</p>
       </div>
     </div>
   `,
     people: `
     <div class="brief">
-      <p class="brief__eyebrow">North Star Communications &middot; Proposal for Eden Origin</p>
-      <h1>Key people</h1>
-      <p class="brief__lede">You would work directly with the people below. Not an account manager passing notes to a team you never meet, but the people actually doing the thinking and the work.</p>
+      <p class="brief__eyebrow">North Star Communications &middot; Predlog za Eden Origin</p>
+      <h1>Ključni ljudi</h1>
+      <p class="brief__lede">Radili biste direktno sa ljudima koji slede. Ne sa menadžerom naloga koji prenosi poruke timu koji nikada ne upoznate, već sa ljudima koji zaista razmišljaju i rade.</p>
       <div class="people">
         <div class="person">
           <div class="person__av"><img src="assets/people/milos.jpg" alt="Miloš Milosavljević"></div>
           <div class="person__body">
             <h3>Miloš Milosavljević</h3>
-            <p class="person__role">Founder and CEO, North Star Communications</p>
-            <p class="person__bio">Miloš has spent more than twenty years turning complicated ideas into clear, human stories, across journalism, media, non-profits, SaaS, HR tech and B2B. He loves the moment a messy problem finally clicks into a simple plan a whole team can get behind, and he has built the platforms, products and campaigns to show it works in practice. Clients tend to value the same three things in him: a systems mind that connects the product, the message and the experience; a knack for saying hard things simply; and a habit of bringing people along rather than leaving them behind. He keeps the work grounded in real discovery, sharp positioning, and a clear path to market.</p>
+            <p class="person__role">Osnivač i direktor, North Star Communications</p>
+            <p class="person__bio">Miloš više od dvadeset godina pretvara složene ideje u jasne, ljudske priče, kroz novinarstvo, medije, neprofitni sektor, softver, HR tehnologiju i B2B. Voli trenutak kada se zamršen problem konačno složi u jednostavan plan iza kog ceo tim može da stane, i izgradio je platforme, proizvode i kampanje koje pokazuju da to u praksi radi. Klijenti kod njega obično cene iste tri stvari: sistemski um koji povezuje proizvod, poruku i iskustvo, dar da teške stvari kaže jednostavno, i naviku da ljude povede sa sobom umesto da ih ostavi za sobom. Rad drži prizemljen u pravom istraživanju, oštrom pozicioniranju i jasnom putu do tržišta.</p>
           </div>
         </div>
         <div class="person">
           <div class="person__av"><img src="assets/people/tijana.jpg" alt="Tijana Damjanović Gertner"></div>
           <div class="person__body">
             <h3>Tijana Damjanović Gertner</h3>
-            <p class="person__role">Partner and COO, North Star Communications</p>
-            <p class="person__bio">Tijana is the kind of marketer who is as comfortable setting the strategy as she is rolling up her sleeves to run it. She blends creative instinct with a sharp commercial head, across brand identity, SEO and content, and full-funnel campaigns built to bring in real business. She has organized and marketed events on the biggest stage, including Miss Universe, and she is refreshingly straight with clients: she will tell you what she would do, show you why it works, and help you avoid the expensive mistakes. Look after your people and do right by your clients, and she is firmly in your corner.</p>
+            <p class="person__role">Partnerka i operativna direktorka, North Star Communications</p>
+            <p class="person__bio">Tijana je marketar kome jednako dobro leže i postavljanje strategije i zasukivanje rukava da se ona sprovede. Spaja kreativni instinkt sa oštrim poslovnim umom, kroz vizuelni identitet, SEO i sadržaj, i kampanje kroz ceo levak napravljene da donesu pravi posao. Organizovala je i promovisala događaje na najvećoj sceni, uključujući izbor za Mis Univerzuma, i osvežavajuće je iskrena sa klijentima, jer će vam reći šta bi uradila, pokazati zašto to radi i pomoći vam da izbegnete skupe greške. Vodite računa o svojim ljudima i budite pošteni prema klijentima, i ona je čvrsto na vašoj strani.</p>
           </div>
         </div>
       </div>
       <div class="brief__foot">
         <div class="brief__star" aria-hidden="true"></div>
-        <p>North Star Communications. Prepared for Eden Origin.</p>
+        <p>North Star Communications. Pripremljeno za Eden Origin.</p>
       </div>
     </div>
   `,
@@ -240,8 +235,8 @@ window.HUB = {
   `,
     cluster: `
     <div class="cluster">
-      <h1>Content cluster: from your posts to the order</h1>
-      <p class="lede">This is the engine of the whole pitch. Your <strong>Instagram and Facebook posts</strong> already earn attention. The cluster gives each one somewhere to go: a <strong>recipe or guide page</strong> derived from that post, which links up to the <strong>product pillar</strong>, which leads to the <strong>order on ananas.rs</strong>. Shown below for one product, <strong>ViolaVerde vanila</strong>. The nodes open the real, live pages on the rebuilt site.</p>
+      <h1>Klaster sadržaja: od vaših objava do porudžbine</h1>
+      <p class="lede">Ovo je motor celog predloga. Vaše <strong>objave na Instagramu i Facebooku</strong> već privlače pažnju. Klaster svakoj daje kuda da vodi: <strong>stranicu recepta ili vodiča</strong> izvedenu iz te objave, koja vodi ka <strong>stranici proizvoda</strong>, koja vodi ka <strong>porudžbini na Ananasu</strong>. Prikazano ispod za jedan proizvod, <strong>ViolaVerde vanila</strong>. Čvorovi otvaraju prave, žive stranice na novom sajtu.</p>
       <div class="diagram">
         <svg viewBox="0 0 1180 660" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -249,9 +244,9 @@ window.HUB = {
             <marker id="arwC" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#c19a4b"/></marker>
             <marker id="arwB" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto"><path d="M0,0 L6.5,3 L0,6 Z" fill="#6b4e8c"/></marker>
           </defs>
-          <text class="col-label" x="30" y="32">Your posts &middot; Instagram &amp; Facebook</text>
-          <text class="col-label" x="470" y="278">Product pillar</text>
-          <text class="col-label" x="880" y="286">The order</text>
+          <text class="col-label" x="30" y="32">Vaše objave &middot; Instagram i Facebook</text>
+          <text class="col-label" x="470" y="278">Stranica proizvoda</text>
+          <text class="col-label" x="900" y="286">Porudžbina</text>
 
           <path class="wire" marker-end="url(#arw)" d="M330 164 C 400 164, 405 350, 462 350"/>
           <path class="wire" marker-end="url(#arw)" d="M330 345 C 405 345, 410 350, 462 350"/>
@@ -262,17 +257,17 @@ window.HUB = {
           <foreignObject x="30" y="291" width="300" height="108"><div xmlns="http://www.w3.org/1999/xhtml" class="node node--case"><a class="node__link" href="website/vodic/kako-nastaje-liker-od-lavande/" target="_blank" rel="noopener"><span class="node__tag">Post &rarr; Vodič</span><span class="node__title">Kako nastaje liker od lavande</span></a><a class="node__social" href="#social"><span class="pf pf--ig">◉</span> Reel iz berbe &rarr;</a></div></foreignObject>
           <foreignObject x="30" y="472" width="300" height="108"><div xmlns="http://www.w3.org/1999/xhtml" class="node node--case"><a class="node__link" href="website/recepti/lavanda-cheesecake/" target="_blank" rel="noopener"><span class="node__tag">Post &rarr; Desert</span><span class="node__title">Čizkejk od lavande</span></a><a class="node__social" href="#social"><span class="pf pf--fb">f</span> Facebook post &rarr;</a></div></foreignObject>
 
-          <foreignObject x="470" y="290" width="250" height="120"><a xmlns="http://www.w3.org/1999/xhtml" class="node node--lp node__link" href="website/proizvodi/violaverde-vanila/" target="_blank" rel="noopener"><span class="node__tag">Product pillar</span><span class="node__title">ViolaVerde vanila</span><span class="node__meta">Every piece links here &rarr;</span></a></foreignObject>
-          <foreignObject x="860" y="298" width="250" height="105"><a xmlns="http://www.w3.org/1999/xhtml" class="node node--crm node__link" style="border-style:solid;cursor:pointer" href="https://ananas.rs/prodavnica/eden-origin" target="_blank" rel="noopener"><span class="node__tag">Poruči &middot; ananas.rs</span><span class="node__title">The order</span><span class="node__meta">Dostava za 48h &rarr;</span></a></foreignObject>
+          <foreignObject x="470" y="290" width="250" height="120"><a xmlns="http://www.w3.org/1999/xhtml" class="node node--lp node__link" href="website/proizvodi/violaverde-vanila/" target="_blank" rel="noopener"><span class="node__tag">Stranica proizvoda</span><span class="node__title">ViolaVerde vanila</span><span class="node__meta">Svaki deo vodi ovde &rarr;</span></a></foreignObject>
+          <foreignObject x="860" y="298" width="250" height="105"><a xmlns="http://www.w3.org/1999/xhtml" class="node node--crm node__link" style="border-style:solid;cursor:pointer" href="https://ananas.rs/prodavnica/eden-origin" target="_blank" rel="noopener"><span class="node__tag">Poruči &middot; ananas.rs</span><span class="node__title">Porudžbina</span><span class="node__meta">Dostava za 48h &rarr;</span></a></foreignObject>
         </svg>
       </div>
       <div class="legend">
-        <span><span class="swatch" style="background:#fff;border:1px solid var(--hairline)"></span> Post &rarr; derived page</span>
-        <span><span class="swatch" style="background:var(--charcoal)"></span> Product pillar</span>
-        <span><span class="swatch" style="background:var(--copper-tint);border:2px dashed var(--copper)"></span> The order (ananas.rs)</span>
-        <span><span class="pf pf--ig" style="width:15px;height:15px">◉</span> One existing post per piece</span>
+        <span><span class="swatch" style="background:#fff;border:1px solid var(--hairline)"></span> Objava &rarr; izvedena stranica</span>
+        <span><span class="swatch" style="background:var(--charcoal)"></span> Stranica proizvoda</span>
+        <span><span class="swatch" style="background:var(--copper-tint);border:2px dashed var(--copper)"></span> Porudžbina (ananas.rs)</span>
+        <span><span class="pf pf--ig" style="width:15px;height:15px">◉</span> Po jedna postojeća objava za svaki deo</span>
       </div>
-      <div class="cluster-note"><strong>How it works:</strong> a recipe post, a harvest reel and a dessert post each link to a page we derived from them, and every one of those pages links up to the <strong>ViolaVerde vanila</strong> product page, which carries the <strong>order button to ananas.rs</strong>. Your other products (ViolaVerde borovnica, Ramonda sirup) work the same way. Node links open the real, live pages. The point: no new posts needed, the ones you have finally lead somewhere.</div>
+      <div class="cluster-note"><strong>Kako radi:</strong> objava sa receptom, snimak iz berbe i objava sa desertom vode ka stranicama koje smo iz njih izveli, a svaka od tih stranica vodi ka stranici proizvoda <strong>ViolaVerde vanila</strong>, koja nosi <strong>dugme za porudžbinu na Ananasu</strong>. Vaši ostali proizvodi (ViolaVerde borovnica, Ramonda sirup) rade na isti način. Čvorovi otvaraju prave, žive stranice. Suština je da nove objave nisu potrebne, jer one koje već imate konačno vode negde.</div>
     </div>
   `,
     articles: `
@@ -310,50 +305,50 @@ window.HUB = {
       .article__schema-note{font-size:.8rem;color:var(--ink-muted);line-height:1.5;margin-top:.7rem}
     </style>
     <div class="cluster">
-      <h1>Sample articles</h1>
-      <p class="lede">Five pages we would publish on your brand, in Serbian, each derived from a post you have already made and each built to lead to the order. These are not mockups: every one is <strong>built and live</strong> on the rebuilt site (see the <b>Website</b> tab). The first is shown <strong>in full</strong> below, and each card links to its live page.</p>
+      <h1>Primeri članaka</h1>
+      <p class="lede">Pet stranica koje bismo objavili na vašem brendu, na srpskom, svaka izvedena iz objave koju ste već napravili i svaka vodi ka porudžbini. Ovo nisu makete, jer je svaka <strong>napravljena i živa</strong> na novom sajtu (pogledajte karticu <b>Sajt</b>). Prva je prikazana <strong>u celini</strong> ispod, a svaka kartica vodi na svoju živu stranicu.</p>
 
       <div class="art-cards">
         <div class="art-card art-card--lead">
           <span class="art-card__type">Recept &middot; koktel</span>
           <b>Viola spritz: koktel od lavande</b>
-          <p>Your summer cocktail post, turned into a page with measures, Recipe schema, and an order button. Shown in full below.</p>
-          <span class="art-card__move">Move: dedicated question-led page &middot; Recipe schema &middot; product baked into the answer</span>
-          <a href="website/recepti/viola-spritz/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Read the live page ↗</a>
+          <p>Vaša letnja objava o koktelu, pretvorena u stranicu sa merama, šemom za recept i dugmetom za porudžbinu. Prikazana u celini ispod.</p>
+          <span class="art-card__move">Potez: posebna stranica vođena pitanjem &middot; šema za recept &middot; proizvod ugrađen u odgovor</span>
+          <a href="website/recepti/viola-spritz/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Otvori živu stranicu ↗</a>
         </div>
         <div class="art-card">
           <span class="art-card__type">Vodič &middot; proces</span>
           <b>Kako nastaje liker od lavande</b>
-          <p>The harvest and maceration story, written by a named maker so search and AI engines can attribute it and trust it.</p>
-          <span class="art-card__move">Move: author bios with verifiable credentials</span>
-          <a href="website/vodic/kako-nastaje-liker-od-lavande/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Read the live page ↗</a>
+          <p>Priča o berbi i maceraciji, potpisana od strane imenovanog proizvođača, tako da je pretraga i veštačka inteligencija mogu pripisati i verovati joj.</p>
+          <span class="art-card__move">Potez: potpisi autora sa proverljivim kredibilitetom</span>
+          <a href="website/vodic/kako-nastaje-liker-od-lavande/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Otvori živu stranicu ↗</a>
         </div>
         <div class="art-card">
           <span class="art-card__type">Vodič &middot; pokloni</span>
           <b>Pokloni od lavande: ideje za svaku priliku</b>
-          <p>Built for a high-intent search ("pokloni od lavande"), it guides gift-buyers straight to the right size and the order.</p>
-          <span class="art-card__move">Move: pages around what buyers actually search</span>
-          <a href="website/vodic/pokloni-od-lavande/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Read the live page ↗</a>
+          <p>Napravljena za pretragu sa jasnom namerom (&bdquo;pokloni od lavande&ldquo;), vodi one koji biraju poklon pravo do prave zapremine i porudžbine.</p>
+          <span class="art-card__move">Potez: stranice oko onoga što kupci zaista pretražuju</span>
+          <a href="website/vodic/pokloni-od-lavande/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Otvori živu stranicu ↗</a>
         </div>
         <div class="art-card">
           <span class="art-card__type">Recept &middot; desert</span>
           <b>Čizkejk od lavande sa ViolaVerde prelivom</b>
-          <p>Your dessert post as a full recipe that uses the product in the method, so making it means owning a bottle.</p>
-          <span class="art-card__move">Move: content where the product is the ingredient</span>
-          <a href="website/recepti/lavanda-cheesecake/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Read the live page ↗</a>
+          <p>Vaša objava o desertu kao pun recept koji koristi proizvod u pripremi, pa napraviti ga znači imati flašu.</p>
+          <span class="art-card__move">Potez: sadržaj u kome je proizvod sastojak</span>
+          <a href="website/recepti/lavanda-cheesecake/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Otvori živu stranicu ↗</a>
         </div>
         <div class="art-card">
           <span class="art-card__type">Bez alkohola</span>
           <b>Limunada od lavande</b>
-          <p>The non-alcoholic serve, opening the brand to families and drivers, and pointing at the Ramonda syrup.</p>
-          <span class="art-card__move">Move: widen the audience without diluting the brand</span>
-          <a href="website/recepti/lavanda-limunada/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Read the live page ↗</a>
+          <p>Bezalkoholna verzija koja brend otvara porodicama i vozačima, i vodi ka Ramonda sirupu.</p>
+          <span class="art-card__move">Potez: proširiti publiku bez razvodnjavanja brenda</span>
+          <a href="website/recepti/lavanda-limunada/" target="_blank" rel="noopener" style="font-family:var(--font-display);font-weight:700;font-size:.8rem;color:var(--copper-dark)">Otvori živu stranicu ↗</a>
         </div>
       </div>
 
       <article class="article">
         <div class="article__head">
-          <span class="article__kicker">Sample article &middot; shown in full</span>
+          <span class="article__kicker">Primer članka &middot; prikazan u celini</span>
           <h2>Viola spritz: koktel od lavande za leto</h2>
           <p class="article__dek">Osvežavajući letnji spritz sa ViolaVerde likerom od lavande, penušavim vinom i tonikom. Leto u čaši za manje od par minuta.</p>
           <div class="article__byline">
@@ -372,7 +367,7 @@ window.HUB = {
         </div>
 
         <div class="recipe-card">
-          <div class="recipe-card__label">Recept: Viola spritz <span>ships with Recipe schema</span></div>
+          <div class="recipe-card__label">Recept: Viola spritz <span>isporučuje se sa Recipe šemom</span></div>
           <div class="recipe-card__b">
             <div><b>Sastojci</b><p>5 cl ViolaVerde likera &middot; 10 cl penušavog vina &middot; 3 cl tonika &middot; led &middot; grančica lavande i kriška limete</p></div>
             <div><b>Priprema (3 min)</b><p>Napunite čašu ledom. Ulijte liker, pa penušavo vino. Dopunite tonikom i lagano promešajte. Ukrasite lavandom i limetom.</p></div>
@@ -384,7 +379,7 @@ window.HUB = {
         </div>
 
         <div class="article__schema">
-          <div class="article__schema-h">The structured data that ships with this page</div>
+          <div class="article__schema-h">Struktuirani podaci koji idu uz ovu stranicu</div>
           <pre><code>{
   "@context": "https://schema.org",
   "@type": "Recipe",
@@ -397,7 +392,7 @@ window.HUB = {
   "recipeInstructions": [ /* koraci ... */ ],
   "author": { "@type": "Organization", "name": "Eden Origin" }
 }</code></pre>
-          <p class="article__schema-note">Recipe schema lets Google show this as a rich result (photo, time, rating) and lets an AI assistant read and recommend it when someone asks for a lavender cocktail. The visible copy and the schema are kept in sync, and validated before publishing.</p>
+          <p class="article__schema-note">Recipe šema omogućava Google-u da ovo prikaže kao bogat rezultat (fotografija, vreme, ocena), a asistentu veštačke inteligencije da ga pročita i preporuči kada neko traži koktel od lavande. Vidljivi tekst i šema se drže usklađeni, i proveravaju pre objave.</p>
         </div>
       </article>
     </div>
@@ -424,8 +419,8 @@ window.HUB = {
     </style>
     <div class="social">
       <div class="soc-head">
-        <h1>Organic posts</h1>
-        <p class="lede">You asked us not to write new posts, because yours are already great, and we agree. So these are not mockups. They are your <strong>actual posts</strong>, pulled from <strong>@eden.origin</strong> (11.1K followers) and your Facebook page, with their real captions. Each is mapped to the page on the rebuilt site we would have it <strong>link to</strong>. That single link is the change: the post stops being a dead end and becomes the top of a path to the order. The dashed link on each card shows the destination; "Otvori original" opens the real post.</p>
+        <h1>Organske objave</h1>
+        <p class="lede">Zamolili ste nas da ne pišemo nove objave, jer su vaše već sjajne, i slažemo se. Zato ovo nisu makete. To su vaše <strong>prave objave</strong>, preuzete sa <strong>@eden.origin</strong> (11,1 hiljada pratilaca) i vaše Facebook strane, sa pravim opisima. Svaka je povezana sa stranicom na novom sajtu na koju bi <strong>vodila</strong>. Ta jedna veza je promena, jer objava prestaje da bude slepa ulica i postaje početak puta do porudžbine. Isprekidana veza na svakoj kartici pokazuje odredište, a &bdquo;Otvori original&ldquo; otvara pravu objavu.</p>
       </div>
       <span id="artFilter" hidden></span>
       <div class="ig-feed">
@@ -480,8 +475,17 @@ window.HUB = {
 
       </div>
       <div id="socialContent" hidden></div>
-      <p class="lede" style="margin-top:1.6rem;font-size:.9rem">Captions, dates and engagement above are your real posts from June and July 2026. The change we are proposing is the dashed link on each card, the destination that turns a post into the first step toward an order. The Lavender Lemon Bliss recipe is now built and live on the site, derived word for word from your own post.</p>
+      <p class="lede" style="margin-top:1.6rem;font-size:.9rem">Opisi, datumi i reakcije iznad su vaše prave objave iz juna i jula 2026. Ono što predlažemo je isprekidana veza na svakoj kartici, odredište koje objavu pretvara u prvi korak ka porudžbini. Recept Lavender Lemon Bliss je sada napravljen i živ na sajtu, izveden od reči do reči iz vaše objave.</p>
     </div>
   `
   }
 };
+
+/* The chassis renders the sidebar label as "Proposal for <name>" (English, baked
+   into hub.html). This hub is fully Serbian, so localize that one string to
+   "Predlog za" after the engine has drawn it. content.js loads before the engine,
+   so defer to DOMContentLoaded, which fires after the engine's synchronous run. */
+document.addEventListener('DOMContentLoaded', function(){
+  var p = document.getElementById('hubProposal');
+  if (p) p.innerHTML = 'Predlog za <b>' + window.HUB.brand.proposalFor + '</b>';
+});

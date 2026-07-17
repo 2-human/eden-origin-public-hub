@@ -180,6 +180,10 @@ def build():
     os.makedirs(os.path.join(OUT, "assets"), exist_ok=True)
     shutil.copy(os.path.join(SRC, "site.css"), os.path.join(OUT, "assets", "site.css"))
     shutil.copy(os.path.join(SRC, "favicon.svg"), os.path.join(OUT, "assets", "favicon.svg"))
+    # copy image assets (photos + generated on-brand imagery)
+    img_src = os.path.join(SRC, "assets", "img")
+    if os.path.isdir(img_src):
+        shutil.copytree(img_src, os.path.join(OUT, "assets", "img"), dirs_exist_ok=True)
     print("done")
 
 if __name__ == "__main__":

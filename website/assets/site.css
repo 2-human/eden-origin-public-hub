@@ -98,7 +98,10 @@ section{position:relative}
   background:linear-gradient(160deg,var(--violet-deep),var(--berry-deep) 60%,var(--violet-ink));
   box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
 .bottle-card--soft{background:linear-gradient(160deg,#efe7f7,#e5dcc9)}
-.bottle-card__glow{position:absolute;inset:0;background:radial-gradient(closest-side at 50% 42%,rgba(255,255,255,.28),transparent)}
+.bottle-card__glow{position:absolute;inset:0;background:radial-gradient(closest-side at 50% 42%,rgba(255,255,255,.28),transparent);pointer-events:none}
+.bottle-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bottle-card--contain{background:linear-gradient(160deg,#f6f1fa,#efe7d8)}
+.bottle-card--contain img{object-fit:contain;padding:6%}
 
 /* feature grid / cards */
 .grid{display:grid;gap:1.5rem}
@@ -165,7 +168,8 @@ section{position:relative}
 .article__body a{text-decoration:underline;text-underline-offset:2px}
 .figure{background:linear-gradient(160deg,var(--lav-pale),var(--paper));border-radius:16px;
   aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin:1.6rem 0;
-  color:var(--violet);border:1px solid var(--hair)}
+  color:var(--violet);border:1px solid var(--hair);position:relative;overflow:hidden;font-size:.8rem}
+.figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .callout{background:var(--lav-mist);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;
   padding:1.1rem 1.3rem;margin:1.6rem 0;font-size:.95rem}
 .callout b{color:var(--violet-ink)}
