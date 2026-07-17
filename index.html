@@ -714,15 +714,19 @@
       +'<div class="g-revsum"><div class="big">'+GBP.rating+'<span class="s">★★★★★</span><span class="c">'+GBP.reviewCount+' reviews</span></div>'
       +'<div class="bars">'+[5,4,3,2,1].map(function(n){var w=n===5?92:(n===4?7:1);return '<div class="g-bar"><span>'+n+'</span><span class="track"><span class="fill" style="width:'+w+'%"></span></span></div>';}).join('')+'</div></div>'
       +revs+'</div>';
-    var postImgs=["build10.avif","hero-8611.avif","photo-8429.avif","build7.avif"];
+    // Post/product images are config-driven: each item may set its own `img`,
+    // otherwise cycle through GBP.photos; if neither is set, render imageless.
+    // (Generalized from hardcoded per-client filenames — upstream fix.)
+    function gImg(item,i){ return item.img || ((GBP.photos&&GBP.photos.length)?GBP.photos[i%GBP.photos.length]:''); }
     var posts=GBP.posts.map(function(p,i){
-      return '<div class="g-post"><img src="assets/gbp/'+postImgs[i%postImgs.length]+'" alt="">'
+      var pi=gImg(p,i);
+      return '<div class="g-post">'+(pi?'<img src="assets/gbp/'+pi+'" alt="">':'')
         +'<div class="g-post__b"><span class="g-post__type">'+esc(p.type)+'</span><b>'+esc(p.title)+'</b><p>'+esc(p.body)+'</p><span class="g-post__cta">'+esc(p.cta)+' &rarr;</span></div></div>';
     }).join('');
     var postsec='<div class="g-sec"><div class="g-sec__h"><h4>Updates</h4><span class="more">View all</span></div><div class="g-posts">'+posts+'</div></div>';
-    var prodImg={"New Builds":"hero-8611.avif","Kitchen Extensions":"build10.avif","Loft Conversions":"build5.avif","Storey Extensions":"build7.avif","Design & Build":"photo-8429.avif","Refurbishment":"photo-2498.avif"};
-    var prods=GBP.products.map(function(p){
-      return '<div class="g-prod"><img src="assets/gbp/'+(prodImg[p.name]||"build7.avif")+'" alt=""><div class="g-prod__b"><b>'+esc(p.name)+'</b><div class="price">'+esc(p.price)+'</div><p>'+esc(p.desc)+'</p></div></div>';
+    var prods=GBP.products.map(function(p,i){
+      var pi=gImg(p,i);
+      return '<div class="g-prod">'+(pi?'<img src="assets/gbp/'+pi+'" alt="">':'')+'<div class="g-prod__b"><b>'+esc(p.name)+'</b><div class="price">'+esc(p.price)+'</div><p>'+esc(p.desc)+'</p></div></div>';
     }).join('');
     var prodsec='<div class="g-sec"><div class="g-sec__h"><h4>Products and services</h4><span class="more">View all</span></div><div class="g-prods">'+prods+'</div></div>';
     var qas=GBP.qa.map(function(q){

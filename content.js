@@ -24,6 +24,10 @@ window.HUB = {
     { section: "Društvene mreže", items: [
       { view: "social", label: "Organske objave", badge: 6 }
     ]},
+    { section: "SEO i GEO signali", items: [
+      { view: "gbp", label: "Google profil" },
+      { view: "tp",  label: "Trustpilot" }
+    ]},
     { section: "CRM", items: [
       { view: "orders", label: "Porudžbine", badge: 6 }
     ]}
@@ -47,7 +51,9 @@ window.HUB = {
     articles: { title: "Primeri članaka", sub: "Stranice koje bismo objavili na vašem brendu, prikazano pet, jedna u celini" },
     website:  { title: "Sajt", sub: "Funkcionalni prototip, dom u koji vaše objave vode", open: WEB, openLabel: "Otvori u novom tabu ↗", tbBadge: "Funkcionalni prototip" },
     social:   { title: "Organske objave", sub: "Vaše prave objave sa Instagrama i Facebooka, povezane sa stranicama na koje bi vodile", open: "https://www.instagram.com/eden.origin/", openLabel: "Otvori Instagram ↗" },
-    orders:   { title: "Porudžbine", sub: "Jednostavan CRM, porudžbine sa količinom, popustom i ukupno plaćenim iznosom" }
+    orders:   { title: "Porudžbine", sub: "Jednostavan CRM, porudžbine sa količinom, popustom i ukupno plaćenim iznosom" },
+    gbp:      { title: "Google profil", sub: "Google poslovni profil, recenzije, objave, proizvodi i pitanja", open: "https://www.google.com/maps/search/Eden+Origin+lavanda+Mili%C4%87evci", openLabel: "Otvori Google mape ↗" },
+    tp:       { title: "Trustpilot", sub: "TrustScore, recenzije i potvrđen profil kao signal poverenja", open: "https://www.trustpilot.com/search?query=Eden%20Origin", openLabel: "Otvori Trustpilot ↗" }
   },
   clients: [
     {name:"Belgrade Waterfront", logo:"belgrade-waterfront.svg", desc:"Najveći projekat razvoja nekretnina na obali u jugoistočnoj Evropi.", did:"SEO, izrada sajta, vođenje društvenih mreža, digitalno oglašavanje i foto i video produkcija."},
@@ -59,6 +65,54 @@ window.HUB = {
     {name:"MVP Workshop", logo:"mvp-workshop.svg", desc:"Studio za Web3 i blockchain rešenja koji isporučuje proizvode od ideje do lansiranja.", did:"Podigli smo poziciju u pretrazi kroz matricu sadržaja sa šest stubova i tehničko SEO pisanje koje govori pravim kupcima, uz primetan rast rangiranja za ključne reči i saobraćaja ciljane publike."},
     {name:"Inery", logo:"inery.svg", desc:"Decentralizovana infrastruktura za podatke i alati za programere namenjeni distribuiranim sistemima, na nivou velikih preduzeća.", did:"Potpuno globalno lansiranje novog blockchain projekta (PR, partnerstva, zajednica, tim, oglasi) za dva meseca. Na dan lansiranja token je skočio sa 0,14 dolara na 0,69 dolara u roku od šest sati."}
   ],
+  /* Illustrative TARGET-STATE data for the Google profile and Trustpilot mockups.
+     Sample reviews/posts/products/Q&A show the optimized profile to build toward. */
+  gbp: {
+    name:"Eden Origin", category:"Liker i sirup od lavande &middot; Milićevci, Čačka",
+    address:"Milićevci, 32000 Čačka, Srbija", hours:"Zatvara se u 17 h",
+    phone:"+381 64 5302590", website:"edenorigin.nsc.agency",
+    attrs:"Porodično &middot; Organska lavanda &middot; Ručna berba &middot; Dostava",
+    photos:["hero-field.jpg","viola-spritz.jpg","gift.jpg","workshop.jpg","cheesecake.jpg"],
+    rating:"5.0", reviewCount:42,
+    reviews:[
+      {author:"Jelena M.", when:"pre 2 nedelje", text:"Naručila sam ViolaVerde kao poklon za mamin rođendan i oduševila je i nju i mene. Ukus je mek i cvetni, nimalo nametljiv, a flaša izgleda predivno na stolu. Dostava je bila brza, pakovanje pažljivo. Definitivno se vraćam po još.", ownerReply:"Hvala vam, Jelena. Baš nam je drago što je mama uživala, a flaša zaista lepo stoji na stolu. Vidimo se ponovo, i pozdravite je od nas. Ana, Eden Origin"},
+      {author:"Marko P.", when:"pre 3 nedelje", text:"Probao sam Viola spritz po njihovom receptu i sada je to naš letnji koktel broj jedan. Lavanda i vanila se savršeno slažu, osveži a nije sladunjavo. Preporuka svima koji vole nešto drugačije.", ownerReply:"Hvala, Marko. Viola spritz je i nama omiljen kad stegnu vrućine. Uživajte i javite kako su prošli gosti. Bojan, Eden Origin"},
+      {author:"Ivana K.", when:"pre mesec dana", text:"Kupili smo za poslovne poklone i utisci su bili odlični. Domaći proizvod sa pravom pričom, lepo upakovan, svi su bili prijatno iznenađeni. Komunikacija je bila besprekorna od porudžbine do isporuke.", ownerReply:"Hvala vam na poverenju, Ivana. Poslovni pokloni su nam posebno dragi jer priča o lavandi ide dalje. Tu smo za sledeću priliku. Ana, Eden Origin"},
+      {author:"Nikola S.", when:"pre mesec dana", text:"Ramonda sirup je hit i kod dece i kod nas. Limunada od lavande je nešto najosvežavajuće što smo probali ovog leta, bez alkohola a sa posebnim ukusom. Kupujemo ponovo.", ownerReply:"Hvala, Nikola. Baš nam je drago što je i najmlađima prijalo. Ramonda je naš način da lavandu probaju baš svi. Bojan, Eden Origin"},
+      {author:"Milica J.", when:"pre 2 meseca", text:"Sve pohvale za trud i kvalitet. Vidi se da je rađeno rukom i sa ljubavlju, a ljubičasta boja i miris su neverovatni. Preporučujem od srca svakome ko traži domaći poklon sa dušom.", ownerReply:"Hvala vam od srca, Milica. Ručni rad traži vreme, pa ovakve reči znače najviše. Radujemo se sledećoj porudžbini. Ana, Eden Origin"}
+    ],
+    posts:[
+      {type:"Novost", title:"Počela je berba lavande", body:"Nova sezona je krenula. Beremo rukom, struk po struk, i sušimo cvet za novu turu ViolaVerde likera i Ramonda sirupa. Pratite nas da vidite ceo put od polja do flaše.", cta:"Saznaj više"},
+      {type:"Ponuda", title:"Poklon-pakovanja za svaku priliku", body:"Za rođendane, slave i poslovne poklone pripremamo pakovanja po želji, sa porukom i sušenom grančicom lavande. Javite priliku i broj komada, predložićemo kombinaciju.", cta:"Pošalji upit"},
+      {type:"Novost", title:"Nagrada za našu malu baštu", body:"Naš rad je prepoznat i izvan Čačka: osvojili smo grant od 10.000 funti u konkurenciji od 80 prijavljenih. Hvala vam što ste deo ove priče.", cta:"Saznaj više"},
+      {type:"Događaj", title:"Nađite nas na sajmu domaćih proizvoda", body:"Ovog vikenda delimo degustacije Viola koktela i sirupa. Svratite da probate i ponesete flašu kući. Vidimo se.", cta:"Pozovi"}
+    ],
+    qa:[
+      {q:"Gde mogu da kupim ViolaVerde?", a:"Možete poručiti direktno kod nas uz dostavu, ili preko naše prodavnice na Ananasu. Na sajtu svaka stranica proizvoda ima dugme za porudžbinu."},
+      {q:"Da li pravite poklon-pakovanja?", a:"Da. Pripremamo pakovanja po želji, sa porukom i sušenom lavandom, za lične i poslovne poklone. Javite nam priliku i broj komada."},
+      {q:"Koliko alkohola ima liker?", a:"ViolaVerde ima 25% alkohola. Ramonda sirup je bez alkohola, pa je pogodan za celu porodicu."},
+      {q:"Da li je proizvod organski?", a:"Da. Lavandu gajimo i beremo rukom u Milićevcima, bez hemijskih preparata, i pravimo je u malim serijama."},
+      {q:"Da li dostavljate širom Srbije?", a:"Da, dostavljamo na kućnu adresu širom Srbije. Preko Ananasa dostava stiže za 48 sati ili brže."}
+    ],
+    products:[
+      {name:"ViolaVerde &middot; vanila", price:"od 1.040 RSD", img:"violaverde-vanila.jpg", desc:"Prvi pravi liker od lavande, omekšan vanilom. 25% alkohola. Mek, cvetni ukus, kao digestiv ili u koktelu."},
+      {name:"ViolaVerde &middot; borovnica", price:"Sezonski", img:"borovnica.jpg", desc:"Druga varijanta sa borovnicom, dublja i voćnija. Za punije koktele i digestiv sa karakterom."},
+      {name:"Ramonda sirup", price:"Bez alkohola", img:"limunada.jpg", desc:"Sirup od lavande za limunade, čajeve i deserte. Osveženje za celu porodicu, bez veštačkih aroma."},
+      {name:"Poklon-pakovanje", price:"Na upit", img:"gift.jpg", desc:"ViolaVerde i Ramonda u pakovanju po želji, sa porukom i sušenom lavandom. Za rođendane, slave i poslovne poklone."}
+    ]
+  },
+  tp: {
+    name:"Eden Origin", domain:"edenorigin.nsc.agency",
+    score:"4.9", reviewCount:28, label:"Odlično",
+    dist:[{s:5,p:90},{s:4,p:8},{s:3,p:1},{s:2,p:1},{s:1,p:0}],
+    reviews:[
+      {author:"Jelena M.", loc:"Beograd, RS", nrev:3, rating:5, when:"20. jun 2026.", title:"Poklon koji se pamti", body:"ViolaVerde sam naručila za mamin rođendan i bila je oduševljena. Ukus mek i cvetni, flaša predivna, dostava brza. Komunikacija besprekorna od početka do kraja. Vraćam se po još.", doe:"Jun 2026.", reply:"Hvala vam, Jelena. Drago nam je što je poklon pogodio pravo. Vidimo se ponovo. Ana, Eden Origin"},
+      {author:"Marko P.", loc:"Novi Sad, RS", nrev:1, rating:5, when:"2. jun 2026.", title:"Naš letnji koktel broj jedan", body:"Viola spritz po njihovom receptu je postao obavezan kod nas. Lavanda i vanila savršeno idu zajedno, osveži a nije sladunjavo. Preporuka svima koji vole nešto drugačije.", doe:"Maj 2026.", reply:"Hvala, Marko. Viola spritz je i nama omiljen. Uživajte. Bojan, Eden Origin"},
+      {author:"Ivana K.", loc:"Čačak, RS", nrev:2, rating:5, when:"18. maj 2026.", title:"Domaći proizvod sa pričom", body:"Kupili smo za poslovne poklone i svi su bili prijatno iznenađeni. Lepo upakovano, prava priča iza proizvoda, isporuka tačno na vreme. Ozbiljan pristup za malu porodičnu firmu.", doe:"Maj 2026.", reply:"Hvala na poverenju, Ivana. Poslovni pokloni su nam posebno dragi. Tu smo za sledeću priliku. Ana, Eden Origin"},
+      {author:"Nikola S.", loc:"Kragujevac, RS", nrev:1, rating:4, when:"29. apr 2026.", title:"Odlična Ramonda za celu porodicu", body:"Ramonda sirup je hit kod dece. Limunada od lavande je osveženje kakvo nismo probali. Jedina zamerka je što je sezonski pa se brzo rasproda, ali to valjda znači da je dobar.", doe:"April 2026.", reply:"Hvala, Nikola. Pravimo u malim serijama pa ume brzo da nestane. Najavićemo sledeću turu. Bojan, Eden Origin"},
+      {author:"Milica J.", loc:"Beograd, RS", nrev:4, rating:5, when:"11. apr 2026.", title:"Ručni rad koji se oseti", body:"Vidi se da je rađeno sa ljubavlju. Boja i miris su neverovatni, a ukus baš onakav kakav se očekuje od pravog domaćeg proizvoda. Preporučujem od srca.", doe:"April 2026.", reply:"Hvala vam od srca, Milica. Ovakve reči znače najviše. Ana, Eden Origin"}
+    ]
+  },
   html: {
     intro: `
     <div class="brief">
@@ -541,6 +595,78 @@ window.HUB = {
         </table>
       </div>
       <div class="cluster-note"><strong>Kako se povezuje:</strong> forma za direktnu dostavu na kartici proizvoda računa količinu, popust na veće količine (5% za 10 do 20, 7% za 21 do 49, 10% za 50 i više) i ukupan iznos, i svaka takva porudžbina bi se pojavila u ovoj tabeli. Popusti su ovde vidljivi po redu, a zbir na vrhu pokazuje promet i odobrene popuste.</div>
+    </div>
+  `,
+    gbp: `
+    <style>
+      .gbp-steps{margin:1.8rem 0;border:1px solid var(--hairline);border-radius:14px;background:#fff;padding:1.3rem 1.5rem}
+      .gbp-steps .eyebrow{margin-bottom:.7rem}
+      .gbp-steps ol{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:.6rem;counter-reset:s}
+      .gbp-steps li{font-size:.93rem;line-height:1.55;color:#2a2a2f}
+      .gbp-steps li b{color:var(--charcoal)}
+    </style>
+    <div class="gbp">
+      <h1>Google poslovni profil</h1>
+      <p class="lede">Google poslovni profil je jedan od najjačih signala za lokalnu pretragu, za Google mape i za odgovore veštačke inteligencije. Kada neko ukuca &bdquo;liker od lavande&ldquo;, &bdquo;domaći poklon&ldquo; ili &bdquo;lavanda Čačak&ldquo;, upravo profil odlučuje da li se pojavljujete. Ovde je gde verovatno stojite danas, i kako bi profil trebalo da izgleda kada se odradi kako treba.</p>
+      <div class="gbp-audit">
+        <p class="eyebrow">Trenutno stanje</p>
+        <h2>Verovatno bez potvrđenog i popunjenog profila</h2>
+        <p>Nismo pronašli aktivan, potvrđen Google profil za Eden Origin, pa je moguće da profil ne postoji ili postoji kao nepotvrđena, prazna stavka. Za brend sa ovako lepim vizuelnim sadržajem i pravom pričom, to znači da najveći deo besplatne vidljivosti u pretrazi i na mapama ostaje neiskorišćen. Recenzije, fotografije i redovne objave su ono što pokreće lokalne rezultate i sve češće hrani odgovore veštačke inteligencije, pa je ovo jedan od najbržih dobitaka.</p>
+        <div class="audit-grid">
+          <div class="audit-cell"><div class="lab">Recenzije</div><div class="val"><span class="now">~0</span><span class="arrow">&rarr;</span><span class="tgt">40+</span></div></div>
+          <div class="audit-cell"><div class="lab">Objave</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">Nedeljno</span></div></div>
+          <div class="audit-cell"><div class="lab">Proizvodi</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">Kompletno</span></div></div>
+          <div class="audit-cell"><div class="lab">Pitanja i odgovori</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">Postavljeno</span></div></div>
+          <div class="audit-cell"><div class="lab">Fotografije</div><div class="val"><span class="now">Malo</span><span class="arrow">&rarr;</span><span class="tgt">50+</span></div></div>
+          <div class="audit-cell"><div class="lab">Odgovori na recenzije</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">100%</span></div></div>
+        </div>
+      </div>
+      <div class="gbp-steps">
+        <p class="eyebrow">Šta je potrebno da se pokrene</p>
+        <ol>
+          <li><b>Potvrdite profil.</b> Kreirajte ili preuzmite Google profil za &bdquo;Eden Origin&ldquo; i verifikujte vlasništvo (poštom, telefonom ili videom).</li>
+          <li><b>Popunite sve.</b> Kategorija, radno vreme, telefon, sajt, oblast dostave, atributi (porodično, organsko) i opis sa ključnim rečima.</li>
+          <li><b>Dodajte fotografije.</b> 20 do 50 kvalitetnih slika: polje, berba, proizvodi, kokteli i pakovanja. Vaš vizuelni sadržaj je ovde velika prednost.</li>
+          <li><b>Unesite proizvode.</b> ViolaVerde, Ramonda i poklon-pakovanja, sa cenama, opisima i linkovima ka porudžbini.</li>
+          <li><b>Pokrenite recenzije.</b> Zamolite zadovoljne kupce i šaljite link za recenziju posle svake porudžbine. Cilj je stalan priliv, a ne jednokratna akcija.</li>
+          <li><b>Odgovarajte na svaku recenziju</b> u roku od 24 sata, i objavljujte nedeljno (novosti, ponude, sezonske objave). Zasejte pitanja i odgovore najčešćim pitanjima.</li>
+        </ol>
+      </div>
+      <p class="gbp-sub">Kako bi trebalo da izgleda</p>
+      <p class="gbp-note">Ilustrativni prikaz ciljnog profila. Primeri recenzija, objava, proizvoda i pitanja pokazuju optimizovan profil ka kome se ide, prikazan onako kako bi izgledao na Google-u.</p>
+      <div class="g" id="gbpMock"></div>
+    </div>
+  `,
+    tp: `
+    <div class="gbp">
+      <h1>Trustpilot</h1>
+      <p class="lede">Trustpilot je mesto gde kupci sa jasnom namerom proveravaju brend pre nego što kupe, a prazan rezultat deluje kao znak upozorenja. Za brend koji tek gradi onlajn prodaju i poklon-tržište, potvrđen i aktivno negovan profil pretvara nezavisan dokaz poverenja u sredstvo koje je vaše. Ovde je trenutni jaz i profil ka kome se ide.</p>
+      <div class="gbp-audit">
+        <p class="eyebrow">Trenutno stanje</p>
+        <h2>Još nema Trustpilot profila</h2>
+        <p>Nismo pronašli potvrđen Trustpilot profil za Eden Origin, pa onaj ko potraži &bdquo;Eden Origin recenzije&ldquo; ne nailazi ni na šta što bi ga uverilo. Trustpilot ocene se pojavljuju i kao zvezdice u Google pretrazi i oglasima, pa ovaj jaz košta vidljivosti i izvan samog Trustpilota. Rešenje je potvrđen profil sa automatskim pozivnicama za recenziju posle svake porudžbine i odgovorom na svaku recenziju.</p>
+        <div class="audit-grid">
+          <div class="audit-cell"><div class="lab">TrustScore</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">4.9</span></div></div>
+          <div class="audit-cell"><div class="lab">Recenzije</div><div class="val"><span class="now">0</span><span class="arrow">&rarr;</span><span class="tgt">30+</span></div></div>
+          <div class="audit-cell"><div class="lab">Profil</div><div class="val"><span class="now">Nepotvrđen</span><span class="arrow">&rarr;</span><span class="tgt">Potvrđen</span></div></div>
+          <div class="audit-cell"><div class="lab">Pozivnice za recenziju</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">Automatske</span></div></div>
+          <div class="audit-cell"><div class="lab">Odgovori na recenzije</div><div class="val"><span class="now">Nema</span><span class="arrow">&rarr;</span><span class="tgt">100%</span></div></div>
+          <div class="audit-cell"><div class="lab">Google zvezdice</div><div class="val"><span class="now">Isključeno</span><span class="arrow">&rarr;</span><span class="tgt">Uključeno</span></div></div>
+        </div>
+      </div>
+      <div class="gbp-steps">
+        <p class="eyebrow">Šta je potrebno da se pokrene</p>
+        <ol>
+          <li><b>Preuzmite profil.</b> Registrujte i potvrdite besplatan poslovni profil za domen edenorigin.nsc.agency.</li>
+          <li><b>Uključite pozivnice.</b> Podesite automatsko slanje pozivnice za recenziju posle svake porudžbine (imejl ili SMS), da priliv bude stalan.</li>
+          <li><b>Odgovarajte na sve.</b> Zahvalite na pozitivnim, mirno i konkretno rešite svaku primedbu. Odgovori grade poverenje jednako kao ocene.</li>
+          <li><b>Uključite Google zvezdice.</b> Povežite Trustpilot sa Google-om da se ocene prikazuju kao zvezdice u pretrazi i oglasima.</li>
+          <li><b>Prikažite dokaz.</b> Dodajte Trustpilot oznaku i najbolje recenzije na sajt i stranice proizvoda, tamo gde se donosi odluka o kupovini.</li>
+        </ol>
+      </div>
+      <p class="gbp-sub">Kako bi trebalo da izgleda</p>
+      <p class="gbp-note">Ilustrativni prikaz ciljnog profila. Primeri ocene i recenzija pokazuju potvrđen Trustpilot profil ka kome se ide, prikazan onako kako bi izgledao na Trustpilotu.</p>
+      <div class="tp" id="tpMock"></div>
     </div>
   `
   }
