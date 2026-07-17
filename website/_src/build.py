@@ -46,6 +46,13 @@ HEAD = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} | Eden Origin</title>
 <meta name="description" content="{desc}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eden Origin">
+<meta property="og:title" content="{title} | Eden Origin">
+<meta property="og:description" content="{desc}">
+<meta property="og:image" content="https://edenorigin.nsc.agency/website/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://edenorigin.nsc.agency/website/assets/og-cover.jpg">
 <link rel="icon" href="{root}assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,6 +201,10 @@ def build():
         shutil.copytree(img_src, os.path.join(OUT, "assets", "img"), dirs_exist_ok=True)
     # shared order-form script (used by product pages)
     shutil.copy(os.path.join(SRC, "order-form.js"), os.path.join(OUT, "assets", "order-form.js"))
+    # social share cover (og:image), sourced from the hub-level assets
+    _oc = os.path.join(OUT, "..", "assets", "og-cover.jpg")
+    if os.path.exists(_oc):
+        shutil.copy(_oc, os.path.join(OUT, "assets", "og-cover.jpg"))
     # review widget: reuse the hub-level files so the website pages are reviewable too
     HUB = os.path.join(OUT, "..")
     for rf in ("review.config.js", "review-bootstrap.js", "review-mode.js", "review-mode.css"):
