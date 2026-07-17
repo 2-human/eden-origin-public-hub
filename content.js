@@ -425,62 +425,62 @@ window.HUB = {
     <div class="social">
       <div class="soc-head">
         <h1>Organic posts</h1>
-        <p class="lede">You asked us not to write new posts, because yours are already great, and we agree. So this is not a set of mockups. It is your <strong>real Instagram and Facebook content</strong>, the kind of posts already on your feed, each one mapped to the page on the rebuilt site we would have it <strong>link to</strong>. That single link is the change: the post stops being a dead end and becomes the top of a path to the order. The dashed link on each card shows the destination.</p>
+        <p class="lede">You asked us not to write new posts, because yours are already great, and we agree. So these are not mockups. They are your <strong>actual posts</strong>, pulled from <strong>@eden.origin</strong> (11.1K followers) and your Facebook page, with their real captions. Each is mapped to the page on the rebuilt site we would have it <strong>link to</strong>. That single link is the change: the post stops being a dead end and becomes the top of a path to the order. The dashed link on each card shows the destination; "Otvori original" opens the real post.</p>
       </div>
       <span id="artFilter" hidden></span>
       <div class="ig-feed">
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>ViolaVerde &middot; lavanda</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#5b4b8a,#3e3163)">Viola spritz<br>u ruci, letnja bašta</div>
-          <div class="ig-post__cap"><b>eden.origin</b> Leto u čaši 💜 Viola spritz sa ViolaVerde likerom od lavande. Recept je jednostavan, a osveženje savršeno. #lavanda #violaverde #koktel</div>
-          <a class="ig-post__link" href="website/recepti/viola-spritz/" target="_blank" rel="noopener">→ vodi na: Recept za Viola spritz</a>
-          <div class="ig-post__foot"><span>&#9825; 312</span><span>&#128172; 24</span><span>&#128190; 58</span></div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; pre 2 dana</span></div><span class="ig-post__pf ig">◉</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#5b4b8a,#3e3163)">Bezalkoholni serve<br>@kissa10.bg &middot; preko leda</div>
+          <div class="ig-post__cap"><b>eden.origin</b> 🍇🫧 U @kissa10.bg svaki korak pripreme pažljivo je osmišljen kako bi se sačuvala puna aroma lavande. Lagan, osvežavajući i potpuno bezalkoholni napitak koji se služi preko leda i završava bobicama mariniranog grožđa.</div>
+          <a class="ig-post__link" href="website/proizvodi/violaverde-vanila/" target="_blank" rel="noopener">→ vodi na: Stranica proizvoda ViolaVerde</a>
+          <div class="ig-post__foot"><span>&#9825; 72</span><span>&#128172; 9</span><a href="https://www.instagram.com/eden.origin/reel/DayHwAwoQ8h/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>ViolaVerde &middot; lavanda</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#4a5a3c)">Reel iz berbe<br>redovi lavande</div>
-          <div class="ig-post__cap"><b>eden.origin</b> Berba je počela 🌿 Sve ručno, struk po struk, bez hemije. Ovako nastaje svaka flaša ViolaVerde. #berba #lavanda #milicevci</div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; 30. jun</span></div><span class="ig-post__pf ig">◉</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#4a5a3c)">Angustifolia vera<br>polje &middot; pčele i polinatori</div>
+          <div class="ig-post__cap"><b>eden.origin</b> 🚀 Ovde sve počinje. Angustifolia vera, zbog svoje aromatičnosti, važna je za pčele i druge polinatore. Od iste vrste lavande nastaju ViolaVerde i Ramonda. Neke stvari ne mogu i ne treba da se ubrzaju. Samo se neguju, sezonu za sezonom.</div>
           <a class="ig-post__link" href="website/vodic/kako-nastaje-liker-od-lavande/" target="_blank" rel="noopener">→ vodi na: Kako nastaje liker od lavande</a>
-          <div class="ig-post__foot"><span>&#9825; 489</span><span>&#128172; 41</span><span>&#128190; 96</span></div>
+          <div class="ig-post__foot"><span>&#9825; 1.008</span><span>&#128172; 14</span><a href="https://www.instagram.com/eden.origin/reel/DaOKIYnIB0D/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>ViolaVerde &middot; lavanda</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#4a3466,#2c2340)">ViolaVerde flaša<br>hero kadar</div>
-          <div class="ig-post__cap"><b>eden.origin</b> Prvi pravi liker od lavande u Srbiji. Lavanda i vanila, 25% alkohola, dvostruka maceracija. Poručite preko Ananasa 💜 #violaverde</div>
-          <a class="ig-post__link" href="website/proizvodi/violaverde-vanila/" target="_blank" rel="noopener">→ vodi na: Stranica proizvoda ViolaVerde vanila</a>
-          <div class="ig-post__foot"><span>&#9825; 274</span><span>&#128172; 19</span><span>&#128190; 33</span></div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Reel &middot; 5. jul</span></div><span class="ig-post__pf ig">◉</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#8f7bbf,#5b4b8a)">Lavender Lemon Bliss<br>recept &middot; ViolaVerde + limun</div>
+          <div class="ig-post__cap"><b>eden.origin</b> 🍹 Lagani letnji užitak. Lavender Lemon Bliss: 30ml ViolaVerde likera, 150ml soka od limuna, led po želji. Osveži se i javi utiske!</div>
+          <a class="ig-post__link" href="website/recepti/lavanda-lemon-bliss/" target="_blank" rel="noopener">→ vodi na: Recept za Lavender Lemon Bliss</a>
+          <div class="ig-post__foot"><span>&#9825; 336</span><span>&#128172; 12</span><a href="https://www.instagram.com/eden.origin/reel/Daa_Pp9IEy1/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>Eden Origin</b><span>Facebook</span></div><span class="ig-post__pf fb">f</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#5b4b8a,#8f7bbf)">Čizkejk od lavande<br>na tanjiru</div>
-          <div class="ig-post__cap"><b>Eden Origin</b> Kremasti čizkejk sa notom lavande i ViolaVerde prelivom. Desert koji izgleda kao iz poslastičarnice, a pravite ga kod kuće.</div>
-          <a class="ig-post__link" href="website/recepti/lavanda-cheesecake/" target="_blank" rel="noopener">→ vodi na: Recept za čizkejk od lavande</a>
-          <div class="ig-post__foot"><span>&#9825; 168</span><span>&#128172; 27</span><span>&#8631; 12</span></div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>Beograd &middot; 28. jun</span></div><span class="ig-post__pf ig">◉</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#4a3466,#2c2340)">Nedeljni Viola kokteli<br>bar &middot; Beograd</div>
+          <div class="ig-post__cap"><b>eden.origin</b> 🍹 Nedeljni Viola kokteli.</div>
+          <a class="ig-post__link" href="website/recepti/" target="_blank" rel="noopener">→ vodi na: Recepti, Viola kokteli</a>
+          <div class="ig-post__foot"><span>&#9825; 31</span><a href="https://www.instagram.com/eden.origin/p/DaJBTScqzJg/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>ViolaVerde &middot; lavanda</span></div><span class="ig-post__pf ig">◉</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#5c6d4a)">Ramonda sirup<br>limunada, leti osvežavajuće</div>
-          <div class="ig-post__cap"><b>eden.origin</b> Za sve koji ne piju alkohol ☀️ Limunada od lavande sa Ramonda sirupom. Osveženje za celu porodicu. #ramonda #bezalkohola #limunada</div>
-          <a class="ig-post__link" href="website/recepti/lavanda-limunada/" target="_blank" rel="noopener">→ vodi na: Recept za limunadu od lavande</a>
-          <div class="ig-post__foot"><span>&#9825; 201</span><span>&#128172; 15</span><span>&#128190; 44</span></div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>eden.origin</b><span>sa Anom &middot; 23. jun</span></div><span class="ig-post__pf ig">◉</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#6e7f5c,#5c6d4a)">Pet godina Eden Origina<br>priča o počecima</div>
+          <div class="ig-post__cap"><b>eden.origin</b> 🪻 Pre 5 godina sanjali smo ovo danas. Pet godina učenja, pokušaja i verovanja da lavanda može biti mnogo više od mirisa u kesici ili ukrasa u bašti. Danas iza nas stoje ViolaVerde i Ramonda. A najlepše tek sledi.</div>
+          <a class="ig-post__link" href="website/prica/" target="_blank" rel="noopener">→ vodi na: Naša priča</a>
+          <div class="ig-post__foot"><span>&#9825; 384</span><span>&#128172; 22</span><a href="https://www.instagram.com/eden.origin/p/DZ8MNwnIHmA/" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
         <div class="ig-post">
-          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>Eden Origin</b><span>Facebook</span></div><span class="ig-post__pf fb">f</span></div>
-          <div class="ig-post__media" style="background:linear-gradient(150deg,#c19a4b,#a07f34)">Poklon-pakovanje<br>ljubičasta i juta</div>
-          <div class="ig-post__cap"><b>Eden Origin</b> Domaći poklon koji se pamti 🎁 ViolaVerde i Ramonda u pakovanju po želji. Za rođendan, slavu ili poslovni poklon. Pišite nam za detalje.</div>
-          <a class="ig-post__link" href="website/vodic/pokloni-od-lavande/" target="_blank" rel="noopener">→ vodi na: Vodič, pokloni od lavande</a>
-          <div class="ig-post__foot"><span>&#9825; 143</span><span>&#128172; 18</span><span>&#8631; 9</span></div>
+          <div class="ig-post__head"><div class="ig-post__av">EO</div><div class="ig-post__who"><b>Eden Origin</b><span>Facebook &middot; strana</span></div><span class="ig-post__pf fb">f</span></div>
+          <div class="ig-post__media" style="background:linear-gradient(150deg,#c19a4b,#a07f34)">„Pod nebom lavande ležimo”<br>brend</div>
+          <div class="ig-post__cap"><b>Eden Origin</b> 🪻 „Pod nebom lavande ležimo.” ViolaVerde, jedinstveni liker od lavande uzgajane u Srbiji.</div>
+          <a class="ig-post__link" href="website/proizvodi/" target="_blank" rel="noopener">→ vodi na: Proizvodi</a>
+          <div class="ig-post__foot"><span>&#128100; 159 pratilaca</span><a href="https://www.facebook.com/profile.php?id=100081009832761" target="_blank" rel="noopener" style="margin-left:auto;color:var(--copper-dark);font-weight:700">Otvori original ↗</a></div>
         </div>
 
       </div>
       <div id="socialContent" hidden></div>
-      <p class="lede" style="margin-top:1.6rem;font-size:.9rem">Captions and engagement above are representative of your existing feed, shown to illustrate the mapping. The change we are proposing is the dashed link on each card, the destination that turns a post into the first step toward an order.</p>
+      <p class="lede" style="margin-top:1.6rem;font-size:.9rem">Captions, dates and engagement above are your real posts from June and July 2026. The change we are proposing is the dashed link on each card, the destination that turns a post into the first step toward an order. The Lavender Lemon Bliss recipe is now built and live on the site, derived word for word from your own post.</p>
     </div>
   `
   }

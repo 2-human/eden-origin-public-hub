@@ -27,6 +27,7 @@ NAV = [
     ("recepti",  "recepti/",     "Recepti",   [
         ("recepti/",                    "Svi recepti"),
         ("recepti/viola-spritz/",       "Viola spritz"),
+        ("recepti/lavanda-lemon-bliss/","Lavender Lemon Bliss"),
         ("recepti/viola-gin-tonik/",    "Viola gin &amp; tonik"),
         ("recepti/lavanda-limunada/",   "Limunada od lavande"),
         ("recepti/lavanda-cheesecake/", "Čizkejk od lavande"),
@@ -141,6 +142,8 @@ PAGES = [
         "Kokteli, limunade i deserti sa ViolaVerde likerom i sirupom od lavande. Jednostavni recepti koje pravite kod kuće.", "recepti/index.html", None),
     ("recepti/viola-spritz/index.html",         "../../","recepti",   "Viola spritz: koktel od lavande za leto",
         "Osvežavajući letnji spritz sa ViolaVerde likerom od lavande, penušavim vinom i tonikom. Recept za jednu čašu.", "recepti/viola-spritz.html", "schema-recipe.html"),
+    ("recepti/lavanda-lemon-bliss/index.html",  "../../","recepti",   "Lavender Lemon Bliss: koktel od lavande i limuna",
+        "Lagani letnji koktel sa ViolaVerde likerom od lavande i sokom od limuna. Tri sastojka, dva minuta. Originalni recept sa Eden Origin Instagrama.", "recepti/lavanda-lemon-bliss.html", None),
     ("recepti/viola-gin-tonik/index.html",      "../../","recepti",   "Viola gin i tonik sa lavandom",
         "Klasičan gin i tonik podignut kašikom ViolaVerde likera od lavande. Elegantan aperitiv za goste.", "recepti/viola-gin-tonik.html", None),
     ("recepti/lavanda-limunada/index.html",     "../../","recepti",   "Limunada od lavande (bez alkohola)",
